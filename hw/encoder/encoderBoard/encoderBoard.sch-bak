@@ -116,12 +116,12 @@ $Comp
 L Connector_Generic:Conn_01x03 J1
 U 1 1 606F9E31
 P 5400 3150
-F 0 "J1" H 5480 3192 50  0000 L CNN
-F 1 "Conn_01x03" H 5480 3101 50  0000 L CNN
+F 0 "J1" H 5318 2825 50  0000 C CNN
+F 1 "Conn_01x03" H 5318 2916 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Horizontal" H 5400 3150 50  0001 C CNN
 F 3 "~" H 5400 3150 50  0001 C CNN
 	1    5400 3150
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 Wire Wire Line
 	4550 2650 5050 2650
