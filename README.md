@@ -4,11 +4,11 @@
 
 - **Martin Kousal**, **ID=** *22xxxx* <br/> 
 xxx[Link to GitHub project folder]( http://github.com/xxx) <br/> 
-- **Matej Ledvina** **ID=** *22xxxx* <br/> 
+- **Matej Ledvina**, **ID=** *22xxxx* <br/> 
 xxx[Link to GitHub project folder]( http://github.com/xxx) <br/> 
-- **Tomáš Kříčka** **ID=**  *22xxxx* <br/> 
+- **Tomáš Kříčka**, **ID=**  *22xxxx* <br/> 
 xxx[Link to GitHub project folder]( http://github.com/xxx) <br/> 
-- **Samuel Košík** **ID=** *221056* <br/>
+- **Samuel Košík**, **ID=** *221056* <br/>
 [Link to GitHub project folder]( https://github.com/amwellius/Digital-electronics-1/tree/main/Labs/project)
 
 ### Project objectives
@@ -20,7 +20,7 @@ This data is shown on four 7segment displays (one part).
 ## Hardware description
 
    ### Programming Board
-   ![image](images/arty_a7.PNG)
+   ![image](images/arty_a7.png)
    - Main programming board is **Arty A7-100T**. It has four Pmod connectors (16.), we have used all of them.
    - 
    ### Main Board
@@ -88,9 +88,9 @@ Write your text here.
 ## References
 
    ### Used:
-   - Theoretical knowledge from Digital-Electronics-1 Labs, 2021> [Link]( https://github.com/tomas-fryza/Digital-electronics-1/tree/master/Labs)
-   - Labs from classes from DE1
-   - DE1 Lecture PDF
+   - Theoretical knowledge from Digital-Electronics-1 Labs, 2021 > [Link]( https://github.com/tomas-fryza/Digital-electronics-1/tree/master/Labs)
+   - Labs from classes from DE1 
+   - DE1 Lecture PDF > [Link]( https://moodle.vutbr.cz/pluginfile.php/331523/mod_resource/content/3/DE1_lecture_part4_CZE.pdf)
    -
    -
    ### Links:
