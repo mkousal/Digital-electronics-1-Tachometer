@@ -2,8 +2,8 @@
 
 ### Team members
 
-- **Martin Kousal**, **ID=** *22xxxx* <br/> 
-xxx[Link to GitHub project folder]( http://github.com/xxx) <br/> 
+- **Martin Kousal**, **ID=** *221063* <br/> 
+[Link to GitHub project folder]( http://github.com/mkousal/Digital-electronics-1-Tachometer) <br/> 
 - **Matej Ledvina**, **ID=** *22xxxx* <br/> 
 xxx[Link to GitHub project folder]( http://github.com/xxx) <br/> 
 - **Tomáš Kříčka**, **ID=**  *223283* <br/> 
@@ -24,14 +24,20 @@ This data is shown on four 7segment displays (one part).
    - Main programming board is **Arty A7-100T**. It has four Pmod connectors (16.), we have used all of them.
    - 
    ### Main Board
-   ![image](images/main_board.PNG)
-   - **Consists of:** three buttons, 7segmet display, Pmod connectors, ...
-   - 
+   ![image](images/tachometerBoard_front.png)
+   ![image](images/tachometerBoard_back.png)
+   - [Schematic](files/tachometerBoard_schematic.pdf)
+   - **Consists of:** three buttons, 7segment display, Pmod connectors, LED status and two connectors for Hall sensors
+   - Board is made for direct connection to Arty A7 board. Three buttons are used to controlling the tachometer. LED at the top shows what value is now displayed at the display.
+   - Used seven segment display with middle double dot and dots for decimal is TDCG1050m - [datasheet](https://www.vishay.com/docs/83180/tdcx10x0m.pdf)
 
    ### Hall sensor board
-   ![image](images/hall_sensor_boars.PNG)
-   - ...
-   - ...
+   ![image](images/encoderBoard_front.png)
+   ![image](images/encoderBoard_back.png)
+   - [Schematic](files/encoderBoard_schematic.pdf)
+   - Hall sensor board only consists of hall sensor and a few passive components that are described in datasheet and connector.
+   - You can screw it by using M3 screw to your bicycle.
+   - Used sensor is MH253 - [datasheet](https://datasheet.lcsc.com/szlcsc/1811141821_MST-Magnesensor-Tech-MST-MH253ESO_C114369.pdf)
 
 ## VHDL modules description and simulations
 
