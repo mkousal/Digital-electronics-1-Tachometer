@@ -41,6 +41,10 @@ This data is shown on four 7segment displays (one part).
 
 ## VHDL modules description and simulations
 
+### `SENSOR`: <br/>
+   This block is used to calculate actual speed and triggering pulse every 100 meters for counting travelled distance. <br/>
+   Uses input from hall sensor mounted at the front wheel. Output one trigger signal every counted 100 meters and calculate actual real speed and set it to display output.   
+
 ### (last one). 7 Segment Driver Module <br/>
    This block consists of 4 smaller modules: `CLOCK`, `UP_DOWN_COUNTER`, `DRIVER_4X7SEG`, `DECODER_7SEG` <br/>
 #### `CLOCK`:
@@ -57,6 +61,12 @@ This data is shown on four 7segment displays (one part).
    Both, common cathode and common anode can be used as well.
    
 ### Testbenches
+
+#### `SENSOR`: <br/>
+   First waveform shows, how the speed calculation works. Calculated speed is written to the `s_disp_o`, which is 16bit word and is here until the new value is calculated.
+   ![image](images/tb_sensor_speed.png)
+   Second waveform shows pulsing at the `s_trigger_o` every 50 sensors tick, which is equal to the 100 meters in real distance.
+   ![image](images/tb_sensor_trigger.png)
 
 #### `CLOCK`: <br/>
    ![image](images/tb_CLOCK.PNG)
