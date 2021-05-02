@@ -59,7 +59,7 @@ begin
         
     p_clk_gen : process
     begin
-        while now < 1100 ms loop         -- 75 periods of 100MHz clock
+        while now < 1100 ms loop         -- 1100 ms of 100MHZ clock
             s_clk_100MHz <= '0';
             wait for c_CLK_100MHZ_PERIOD / 2;
             s_clk_100MHz <= '1';
@@ -68,7 +68,7 @@ begin
         wait;
     end process p_clk_gen;
     
-    p_reset_gen : process
+    p_reset_gen : process -- generate asynchronous reset
     begin
         s_arst <= '0';
         wait for 22 ns;
@@ -81,35 +81,34 @@ begin
         s_arst <= '0';
         wait;
     end process p_reset_gen;
-    
---    p_stimulus : process
---    begin
---        while now < 750 ns loop
---            s_sensor_i <= '0';
---            wait for 1 ns;
---            s_sensor_i <= '1';
---            wait for 1 ns;
---        end loop;
---        wait;
---    end process p_stimulus;    
 
+--    p_stimulus : process -- generate some sensor pulses    
+--    begin                          
+--        s_sensor_i <= '0';
+--        wait for 10 ns;
+--        s_sensor_i <= '1';
+--        wait for 30 ns;
+--        s_sensor_i <= '0';
+--        wait for 300 ms;
+--        s_sensor_i <= '1';
+--        wait for 30 ns;   
+--        s_sensor_i <= '0';    
+--        wait for 250 ms;
+--        s_sensor_i <= '1';
+--        wait for 30 ns;
+--        s_sensor_i <= '0';         
+--        wait;                      
+--    end process p_stimulus;
 
-    p_stimulus : process           
-    begin                          
-        s_sensor_i <= '0';
-        wait for 10 ns;
-        s_sensor_i <= '1';
-        wait for 30 ns;
-        s_sensor_i <= '0';
-        wait for 300 ms;
-        s_sensor_i <= '1';
-        wait for 30 ns;   
-        s_sensor_i <= '0';    
-        wait for 250 ms;
-        s_sensor_i <= '1';
-        wait for 30 ns;
-        s_sensor_i <= '0';         
-        wait;                      
-    end process p_stimulus;
+    p_signal_gen : process
+    begin
+        while now < 1100 ms loop         -- 1100 ms of 100MHZ clock
+            s_sensor_i <= '0';
+            wait for c_CLK_100MHZ_PERIOD;
+            s_sensor_i <= '1';
+            wait for c_CLK_100MHZ_PERIOD;
+        end loop;
+        wait;
+    end process p_signal_gen;
             
 end Behavioral;

@@ -47,6 +47,7 @@ architecture Behavioral of sensor is
     signal s_speed      : integer := 0; -- integer variable for storing speed
     signal s_speed_cnt  : integer := 0; -- integer counter used for speed calculation
     signal s_temp       : std_logic := '0'; -- logical value used in speed calculation
+    signal s_cnt        : integer := 0; 
     
     signal s_sensor_i_d  : std_logic := '0'; -- signals for detecting rising edge
     signal s_sensor_i_re : std_logic;
@@ -96,13 +97,21 @@ begin
             cnt := cnt + 1;
         end if;
         
-        if (rising_edge (clk) and cnt >= 50) then -- set trigger output every 100 meters
-            trigger_o <= '1';
-            cnt := (others => '0');
-        end if;
-        if (rising_edge (clk) and cnt < 50) then -- if distance <100 meters, set trigger to '0'
-            trigger_o <= '0';
-        end if;
+--        if (rising_edge (clk) and cnt >= 50) then -- set trigger output every 100 meters
+--            trigger_o <= '1';
+--            cnt := (others => '0');
+--        end if;
+--        if (rising_edge (clk) and cnt < 50) then -- if distance <100 meters, set trigger to '0'
+--            trigger_o <= '0';
+--        end if;
+        if rising_edge (clk) then
+            if cnt >= 50 then
+                trigger_o <= '1';      
+                cnt := (others => '0');
+            else
+                trigger_o <= '0';
+            end if;
+        end if;                     
     end process p_cnt;
     
     p_speed : process (clk, sensor_i)
@@ -128,7 +137,7 @@ begin
             end if;       
         end if;
         
-        if s_sensor_i_re = '1' then
+        if sensor_i = '1' and clk = '0' then
             if (s_speed_cnt = 0) then
                 s_speed <= 0;
             else
