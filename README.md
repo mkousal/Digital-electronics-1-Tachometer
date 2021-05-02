@@ -7,7 +7,7 @@
 - **Matej Ledvina**, **ID=** *22xxxx* <br/> 
 xxx[Link to GitHub project folder]( http://github.com/xxx) <br/> 
 - **Tomáš Kříčka**, **ID=**  *223283* <br/> 
-xxx[Link to GitHub project folder]( https://github.com/TomasKricka/Digital-electronics-1) <br/> 
+[Link to GitHub]( https://github.com/TomasKricka) <br/> 
 - **Samuel Košík**, **ID=** *221056* <br/>
 [Link to GitHub project folder]( https://github.com/amwellius/Digital-electronics-1/tree/main/Labs/project)
 
