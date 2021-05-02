@@ -59,6 +59,11 @@ This data is shown on four 7segment displays (one part).
 #### `DECODER_7SEG`:
    This module is used for displaying data on 7segment display. If have more displays, MUX has to be used. <br/>
    Both, common cathode and common anode can be used as well.
+
+### `CALORIES`:
+   This block is calculating burned calories by measuring the time between each pedals rotations. Rotation is captured by hall probe attached to pedal. The 100 MHz clock is used for counting time. Every 0.5s a number is increased, which recalculates the calories formula. When signal from hall probe is not generating for 2s, the number that was increasing is stopped. The amount of burned calories is send to display.
+
+<br>
    
 ### Testbenches
 
@@ -89,6 +94,13 @@ This data is shown on four 7segment displays (one part).
    ![image](images/tb_DRIVER_4x7SEG_03.PNG)
 #### `DECODER_7SEG`:
    ![image](images/tb_DECODER_7SEG.PNG)
+
+### `CALORIES`
+   The simulation is in ratio 1s = 10ms. In wave form is display calories counting in both modes and amount of burned calories is sending to display.
+   ![image](images/tb_calories.PNG)
+
+<br>
+
 
 
 ## TOP module description and simulations
