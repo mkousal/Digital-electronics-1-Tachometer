@@ -19,13 +19,14 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use ieee.numeric_std.all;
 --use IEEE.NUMERIC_STD.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
 entity DECODER_7SEG is
     Port ( 
-           hex_i : in STD_LOGIC_VECTOR (4 - 1 downto 0);
+           hex_i : in unsigned (4 - 1 downto 0);
            seg_o : out STD_LOGIC_VECTOR (7 - 1 downto 0));
 end DECODER_7SEG;
 

@@ -29,13 +29,14 @@ entity DRIVER_4x7SEG is
         clk     : in  std_logic;        -- Main clock
         reset   : in  std_logic;        -- Synchronous reset
         --16-bit main input data
-        data_i  : in   std_logic_vector(16 - 1 downto 0);  
+        data_i  : in   unsigned(16 - 1 downto 0);  
         -- 1-bit input value for decimal points and colon
-        dp_i    : in  std_logic_vector(1 - 1 downto 0);
-        dd_i    : in  std_logic_vector(1 - 1 downto 0); 
+        dp_i    : in  std_logic;
+        dd_i    : in  std_logic; 
         
-        dp_o    : out std_logic_vector(1 - 1 downto 0);
-        dd_o    : out std_logic_vector(1 - 1 downto 0);
+        dp_o     : out std_logic;
+        dd_o     : out std_logic;
+        dd_dig_o : out std_logic := '1';
         -- Cathode values for individual segments
         seg_o   : out std_logic_vector(7 - 1 downto 0);
         -- Common catode signals to individual displays
@@ -53,7 +54,7 @@ architecture Behavioral of DRIVER_4x7SEG is
     -- Internal 2-bit counter for multiplexing 4 digits
     signal s_cnt : std_logic_vector(2 - 1 downto 0);
     -- Internal 4-bit value for 7-segment decoder
-    signal s_hex : std_logic_vector(4 - 1 downto 0);
+    signal s_hex : unsigned(4 - 1 downto 0);
 
 begin
     --------------------------------------------------------------------
