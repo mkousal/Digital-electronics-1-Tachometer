@@ -48,6 +48,9 @@ architecture Behavioral of sensor is
     signal s_speed_cnt  : integer := 0; -- integer counter used for speed calculation
     signal s_temp       : std_logic := '0'; -- logical value used in speed calculation
     
+    signal s_sensor_i_d  : std_logic := '0'; -- signals for detecting rising edge
+    signal s_sensor_i_re : std_logic;
+    
     function int2bcd ( temp : integer ) return unsigned is -- function for getting data for display from integer value
     variable i 		: integer:=0;
     variable bcd 	: unsigned(15 downto 0) := (others => '0');
@@ -85,36 +88,39 @@ begin
     p_cnt : process (clk, sensor_i, arst)
     variable cnt : unsigned (6 - 1 downto 0) := (others => '0');  -- Internal 6bit counter for counting pulses from Hall sond
     begin
-        if rising_edge (arst) then
+        if arst = '1' then  -- asynchronous reset for meter counter
             cnt := (others => '0'); 
         end if;
         
-        if rising_edge (sensor_i) then
+        if s_sensor_i_re = '1' then -- count every rotation of wheel, in our project 1 rot = 2 meters
             cnt := cnt + 1;
         end if;
         
-        if (rising_edge (clk) and cnt >= 50) then
+        if (rising_edge (clk) and cnt >= 50) then -- set trigger output every 100 meters
             trigger_o <= '1';
             cnt := (others => '0');
-        else
+        end if;
+        if (rising_edge (clk) and cnt < 50) then -- if distance <100 meters, set trigger to '0'
             trigger_o <= '0';
         end if;
-        
     end process p_cnt;
     
     p_speed : process (clk, sensor_i)
     begin
         if rising_edge (clk) then
+            s_sensor_i_d <= sensor_i;   -- detecting rising edge of signal
+            s_sensor_i_re <= not s_sensor_i_d and sensor_i; -- write pulse to signal that detects rising edge
+            
             if sensor_i = '1' then
                 s_temp <= '1';
                 s_speed_cnt <= 0;
             end if;
             
-            if s_temp = '1' and sensor_i = '0' then
+            if s_temp = '1' and sensor_i = '0' then -- count period time between two sensor signals
                 s_speed_cnt <= s_speed_cnt + 1;
             end if;     
             
-            if s_speed_cnt > 50000000 then -- speed will be < 3.6 km/h
+            if s_speed_cnt > 50000000 then -- speed will not be detected if < 3.6 km/h, display 0
                 s_speed_cnt <= 0;
                 s_temp <= '0';
                 s_speed <= 0;
@@ -122,7 +128,7 @@ begin
             end if;       
         end if;
         
-        if rising_edge (sensor_i) then
+        if s_sensor_i_re = '1' then
             if (s_speed_cnt = 0) then
                 s_speed <= 0;
             else
@@ -130,7 +136,7 @@ begin
             end if;
         end if;
         
-        if falling_edge (sensor_i) then
+        if s_sensor_i_re = '1' and clk = '0' then
             disp_o <= int2bcd(temp => (s_speed)); -- write speed to display output
         end if;
         
