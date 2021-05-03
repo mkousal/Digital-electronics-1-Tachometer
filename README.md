@@ -17,7 +17,7 @@
 - **Martin Kousal**, **ID=** *221063* <br/> 
 [Link to GitHub project folder]( http://github.com/mkousal/Digital-electronics-1-Tachometer) <br/> 
 - **Matej Ledvina**, **ID=** *221339* <br/> 
-xxx[Link to GitHub project folder]( https://github.com/Ledvuk/Digital-electronics-1) <br/> 
+[Link to GitHub]( https://github.com/Ledvuk/Digital-electronics-1) <br/> 
 - **Tomáš Kříčka**, **ID=**  *223283* <br/> 
 [Link to GitHub]( https://github.com/TomasKricka) <br/> 
 - **Samuel Košík**, **ID=** *221056* <br/>
