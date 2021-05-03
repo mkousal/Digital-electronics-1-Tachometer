@@ -21,7 +21,7 @@
 - **Tomáš Kříčka**, **ID=**  *223283* <br/> 
 [Link to GitHub]( https://github.com/TomasKricka) <br/> 
 - **Samuel Košík**, **ID=** *221056* <br/>
-[Link to GitHub project folder]( https://github.com/amwellius/Digital-electronics-1/tree/main/Labs/project)
+[Link to GitHub]( https://github.com/amwellius/Digital-electronics-1)
 
 ### Project objectives
 
