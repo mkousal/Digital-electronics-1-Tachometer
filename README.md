@@ -43,7 +43,7 @@ This data is shown on four 7segment displays (one part).
    - You can screw it by using M3 screw to your bicycle.
    - Used sensor is *MH253* - [datasheet](https://datasheet.lcsc.com/szlcsc/1811141821_MST-Magnesensor-Tech-MST-MH253ESO_C114369.pdf)
 
-## VHDL modules description and simulations
+## VHDL modules description
 
 ### Buttons
 #### `Button_int`:
@@ -75,22 +75,27 @@ This block also contains a **function** which converts the traveled distance fro
  
  This block also contains a function which converts the total time from *binary integer* to *BCD code* to be displayed on the 4 digit 7 segment display.
 
-### SENSOR: <br/>
+### SENSOR <br/>
 #### `sensor`:
-   This block is used to calculate actual speed and triggering pulse every 100 meters for counting travelled distance. <br/>
-   Uses input from hall sensor mounted at the front wheel. Output one trigger signal every counted 100 meters and calculate actual real speed and set it to display output.   
+   - This block is used to calculate actual speed and triggering pulse every 100 meters for counting travelled distance. <br/>
+   - Uses input from hall sensor mounted at the front wheel. Output one trigger signal every counted 100 meters and calculate actual real speed and set it to display output.   
 
 ### 7 Segment Driver Module <br/>
-   This block consists of 4 smaller modules: `CLOCK`, `UP_DOWN_COUNTER`, `DRIVER_4X7SEG`, `DECODER_7SEG` <br/>
+   - This block consists of 4 smaller modules: 
+      i. `CLOCK`, 
+      ii. `UP_DOWN_COUNTER`, 
+      iii. `DRIVER_4X7SEG`, 
+      iiii. `DECODER_7SEG` <br/>
 #### `CLOCK`:
-   Generates 100MHz clock. This periodic signal is used in module `UP_DOWN_COUNTER`, which reacts on rising edge of the signal. <br/>
-   Originally uses 4ms for each segment.
+   - Generates 100MHz clock. 
+   - This periodic signal is used in module `UP_DOWN_COUNTER`, which reacts on rising edge of the signal. <br/>
+   - Originally uses 4ms for each segment.
 #### `UP_DOWN_COUNTER`:
-   According settings (g_CNT_WIDTH), counts as the edge of the clock signal rises. <br/>
+   - According settings (g_CNT_WIDTH), counts as the edge of the clock signal rises. <br/>
 #### `DRIVER_4X7SEG`:
-   Main module, drives four 7segment displays. It is determinated by `CLOCK` and `UP_DOWN_COUNTER`.<br/>
-   Process MUX uses above modules to set data_outputs to each 7segment display. <br/>
-   Input is a 16bit unsigned (`b"xxxx xxxx xxxx xxxx"`)
+   - Main module, drives four 7segment displays. It is determinated by `CLOCK` and `UP_DOWN_COUNTER`.<br/>
+   - Process MUX uses above modules to set data_outputs to each 7segment display. <br/>
+   - Input is a 16bit unsigned (`b"xxxx xxxx xxxx xxxx"`)
 #### `DECODER_7SEG`:
    This module is used for displaying data on 7segment display. If have more displays, MUX has to be used. <br/>
    Both, common cathode and common anode can be used as well.
@@ -102,7 +107,7 @@ This block also contains a **function** which converts the traveled distance fro
    - The 100 MHz clock is used for counting time. Every 0.5s a number is increased, which recalculates the calories formula. 
    - When signal from hall probe is not generating for 2s, the number that was increasing is stopped. The amount of burned calories is sent to display.
    
-### Testbenches
+## Testbenches and simulations
 #### `Button_int`:
    - Shows states of `button_int` block
    - In order to save time and make the inner working of this device more clear, all simulated data has been speedded up.   
@@ -134,10 +139,10 @@ This block also contains a **function** which converts the traveled distance fro
    ![image](images/tb_CLOCK.PNG)
    
 #### `UP_DOWN_COUNTER`: <br/>
-   - As internal values set, counts with edge of the clock
-   - 0-31 states
+   - As internal values set, counts with edge of the clock.
+   - 0-31 states:
    ![image](images/tb_UP_DOWN_COUNTER_01.PNG)
-   - 0-31 states
+   - 0-31 states:
    ![image](images/tb_UP_DOWN_COUNTER_02.PNG)
    - 0-4 states = This is used in our application.
    - Four 7segment displays are controlled by this states.
@@ -152,14 +157,15 @@ This block also contains a **function** which converts the traveled distance fro
    ![image](images/tb_DRIVER_4x7SEG_01.PNG)
    ![image](images/tb_DRIVER_4x7SEG_02.PNG)   
    - This screenshot shows a real situation, when input data will be refreshed every one second (tachometer). 
-   - If data is not changed for a while, displays will use last data. This prevents from bad/unwanted values. 
+   - If data is not changed for a while, displays will use last data. This prevents from wrong/unwanted values. 
    ![image](images/tb_DRIVER_4x7SEG_03.PNG)
 #### `DECODER_7SEG`:
    - Decodes 4bit signal to 7bit (7 segments (+ decimal dot and colon)).
    ![image](images/tb_DECODER_7SEG.PNG)
 
-#### `calories`
-   The simulation is in ratio 1s = 10ms. In wave form is display calories counting in both modes and amount of burned calories is sending to display.
+#### `calories`:
+   - The simulation is in ratio 1s = 10ms. 
+   - In wave form is display calories counting in both modes and amount of burned calories is sending to display.
    ![image](images/tb_calories.PNG)
 
 ## TOP module description and simulations
@@ -167,7 +173,7 @@ This block also contains a **function** which converts the traveled distance fro
    - Final test schema can be seen below:
    ![image](images/top_tachometer.png)
    - After having **main board** and **hall sensor board** done, software can be written into Arty A7 board
-   ![image](implementation_completed)
+   ![image](images/implementation_completed.png)
 
 ## Video
 
