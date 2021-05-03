@@ -53,7 +53,8 @@ This data is shown on four 7segment displays (one part).
    - *rst signal* will make the current displayed data reset to 0. 
    - The enable signal will be present if the trip is not paused, on *pause* the trip data is not counted. 
    - This block automaticaly wipes previous trip data when the mode is turned on.
-<br/>
+
+
    - This block also contains a **function** which converts the traveled distance from *binary integer* to *BCD code* to be displayed on the 4 digit 7 segment display.
 
 ### Main controling module
