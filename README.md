@@ -15,12 +15,16 @@ xxx[Link to GitHub project folder]( https://github.com/Ledvuk/Digital-electronic
 
 Our application uses two hall sensors for measuring speed, traveled distance, burnt calories and time (not by the hall sensor). <br/>
 This data is shown on four 7segment displays (one part).
+ - Calories counting
+ - Total time
+ - Total distance traveled
+ -  
 
 
 ## Hardware description
 
    ### Programming Board
-   ![image](images/arty_a7.png)
+   ![image](images/arty_a7.png = 250x250)
    - Main programming board is **Arty A7-100T**. It has four Pmod connectors (16.), we have used all of them.
    - 
    ### Main Board
