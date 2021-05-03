@@ -189,7 +189,7 @@ This block also contains a **function** which converts the traveled distance fro
    - TOP module represents the whole project
    - Final test schema can be seen below:
    ![image](images/top_tachometer.svg)
-   - After having **main board** and **hall sensor board** done, software can be written into Arty A7 board. Generated bitstream is available [here](sw\tachometer\tachometer.runs\impl_1\top.bit).
+   - After having **main board** and **hall sensor board** done, software can be written into Arty A7 board. Generated bitstream is available [here](sw\tachometer\tachometer.runs\impl_1\top.bit). <br/>
    ![image](images/implementation_completed.png)
 
 ## Video
@@ -203,6 +203,8 @@ This block also contains a **function** which converts the traveled distance fro
    - Theoretical knowledge from Digital-Electronics-1 Labs, 2021 > [Link]( https://github.com/tomas-fryza/Digital-electronics-1/tree/master/Labs)
    - Labs from classes **DE1** 
    - DE1 Lecture PDF > [Link]( https://moodle.vutbr.cz/pluginfile.php/331523/mod_resource/content/3/DE1_lecture_part4_CZE.pdf)
+   - [7 Segment Display]( https://docs.rs-online.com/6e0e/0900766b8130126b.pdf)
+   - [Hall sensor](https://datasheet.lcsc.com/szlcsc/1811141821_MST-Magnesensor-Tech-MST-MH253ESO_C114369.pdf)
  
    ### Used programs and its links:
    - [Xilinx Vivado 2020]( https://www.xilinx.com/products/design-tools/vivado.html)
@@ -210,10 +212,8 @@ This block also contains a **function** which converts the traveled distance fro
    - [KiCad]( https://www.kicad.org/)
    - [EdaPlayGround]( https://www.edaplayground.com/)
    - [Xilinx Vivado 2020]( https://www.xilinx.com/products/design-tools/vivado.html)
-   - [7 Segment Display]( https://docs.rs-online.com/6e0e/0900766b8130126b.pdf)
    - [Vivado tutorials]( https://vhdlwhiz.com/basic-vhdl-tutorials/ )
    - [Tutorial from Xilinx]( https://www.xilinx.com/support/documentation/university/Vivado-Teaching/HDL-Design/2013x/Nexys4/Verilog/docs-pdf/Vivado_tutorial.pdf)
-   - [7 Segment Display]( https://docs.rs-online.com/6e0e/0900766b8130126b.pdf)
    - [Board Editor]( https://jamboard.google.com/)
    - [GitHub Desktop]( https://desktop.github.com/)
    - [Git Bash]( https://git-scm.com/download/win)
