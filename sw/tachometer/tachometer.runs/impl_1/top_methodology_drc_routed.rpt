@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Mon May  3 00:23:36 2021
+| Date         : Mon May  3 09:53:17 2021
 | Host         : MARTIN-DESKTOP running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
 | Design       : top
@@ -23,2576 +23,164 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 614
+             Violations found: 199
 +-----------+------------------+----------------------------------+------------+
 | Rule      | Severity         | Description                      | Violations |
 +-----------+------------------+----------------------------------+------------+
-| TIMING-17 | Critical Warning | Non-clocked sequential cell      | 512        |
+| TIMING-14 | Critical Warning | LUT on the clock tree            | 29         |
 | HPDR-1    | Warning          | Port pin direction inconsistency | 19         |
 | LUTAR-1   | Warning          | LUT drives async reset alert     | 54         |
-| TIMING-20 | Warning          | Non-clocked latch                | 29         |
+| SYNTH-13  | Warning          | combinational multiplier         | 2          |
+| TIMING-16 | Warning          | Large setup violation            | 61         |
+| TIMING-18 | Warning          | Missing input or output delay    | 32         |
+| TIMING-20 | Warning          | Non-clocked latch                | 2          |
 +-----------+------------------+----------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
-TIMING-17#1 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/FSM_sequential_State_reg[0]/C is not reached by a timing clock
+TIMING-14#1 Critical Warning
+LUT on the clock tree  
+The LUT sensor/disp_o_reg[10]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
 Related violations: <none>
 
-TIMING-17#2 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/FSM_sequential_State_reg[1]/C is not reached by a timing clock
+TIMING-14#2 Critical Warning
+LUT on the clock tree  
+The LUT sensor/disp_o_reg[11]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
 Related violations: <none>
 
-TIMING-17#3 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/FSM_sequential_State_reg[2]/C is not reached by a timing clock
+TIMING-14#3 Critical Warning
+LUT on the clock tree  
+The LUT sensor/disp_o_reg[12]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
 Related violations: <none>
 
-TIMING-17#4 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_cnt_reg[0]/C is not reached by a timing clock
+TIMING-14#4 Critical Warning
+LUT on the clock tree  
+The LUT sensor/disp_o_reg[12]_LDC_i_8 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
 Related violations: <none>
 
-TIMING-17#5 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_cnt_reg[10]/C is not reached by a timing clock
+TIMING-14#5 Critical Warning
+LUT on the clock tree  
+The LUT sensor/disp_o_reg[13]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
 Related violations: <none>
 
-TIMING-17#6 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_cnt_reg[11]/C is not reached by a timing clock
+TIMING-14#6 Critical Warning
+LUT on the clock tree  
+The LUT sensor/disp_o_reg[14]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
 Related violations: <none>
 
-TIMING-17#7 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_cnt_reg[12]/C is not reached by a timing clock
+TIMING-14#7 Critical Warning
+LUT on the clock tree  
+The LUT sensor/disp_o_reg[15]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
 Related violations: <none>
 
-TIMING-17#8 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_cnt_reg[13]/C is not reached by a timing clock
+TIMING-14#8 Critical Warning
+LUT on the clock tree  
+The LUT sensor/disp_o_reg[1]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
 Related violations: <none>
 
-TIMING-17#9 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_cnt_reg[14]/C is not reached by a timing clock
+TIMING-14#9 Critical Warning
+LUT on the clock tree  
+The LUT sensor/disp_o_reg[2]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
 Related violations: <none>
 
-TIMING-17#10 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_cnt_reg[15]/C is not reached by a timing clock
+TIMING-14#10 Critical Warning
+LUT on the clock tree  
+The LUT sensor/disp_o_reg[3]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
 Related violations: <none>
 
-TIMING-17#11 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_cnt_reg[16]/C is not reached by a timing clock
+TIMING-14#11 Critical Warning
+LUT on the clock tree  
+The LUT sensor/disp_o_reg[4]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
 Related violations: <none>
 
-TIMING-17#12 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_cnt_reg[17]/C is not reached by a timing clock
+TIMING-14#12 Critical Warning
+LUT on the clock tree  
+The LUT sensor/disp_o_reg[5]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
 Related violations: <none>
 
-TIMING-17#13 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_cnt_reg[18]/C is not reached by a timing clock
+TIMING-14#13 Critical Warning
+LUT on the clock tree  
+The LUT sensor/disp_o_reg[6]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
 Related violations: <none>
 
-TIMING-17#14 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_cnt_reg[19]/C is not reached by a timing clock
+TIMING-14#14 Critical Warning
+LUT on the clock tree  
+The LUT sensor/disp_o_reg[7]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
 Related violations: <none>
 
-TIMING-17#15 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_cnt_reg[1]/C is not reached by a timing clock
+TIMING-14#15 Critical Warning
+LUT on the clock tree  
+The LUT sensor/disp_o_reg[8]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
 Related violations: <none>
 
-TIMING-17#16 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_cnt_reg[20]/C is not reached by a timing clock
+TIMING-14#16 Critical Warning
+LUT on the clock tree  
+The LUT sensor/disp_o_reg[9]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
 Related violations: <none>
 
-TIMING-17#17 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_cnt_reg[21]/C is not reached by a timing clock
+TIMING-14#17 Critical Warning
+LUT on the clock tree  
+The LUT sensor/s_speed_reg[10]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
 Related violations: <none>
 
-TIMING-17#18 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_cnt_reg[22]/C is not reached by a timing clock
+TIMING-14#18 Critical Warning
+LUT on the clock tree  
+The LUT sensor/s_speed_reg[11]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
 Related violations: <none>
 
-TIMING-17#19 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_cnt_reg[23]/C is not reached by a timing clock
+TIMING-14#19 Critical Warning
+LUT on the clock tree  
+The LUT sensor/s_speed_reg[12]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
 Related violations: <none>
 
-TIMING-17#20 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_cnt_reg[24]/C is not reached by a timing clock
+TIMING-14#20 Critical Warning
+LUT on the clock tree  
+The LUT sensor/s_speed_reg[13]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
 Related violations: <none>
 
-TIMING-17#21 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_cnt_reg[25]/C is not reached by a timing clock
+TIMING-14#21 Critical Warning
+LUT on the clock tree  
+The LUT sensor/s_speed_reg[2]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
 Related violations: <none>
 
-TIMING-17#22 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_cnt_reg[26]/C is not reached by a timing clock
+TIMING-14#22 Critical Warning
+LUT on the clock tree  
+The LUT sensor/s_speed_reg[3]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
 Related violations: <none>
 
-TIMING-17#23 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_cnt_reg[27]/C is not reached by a timing clock
+TIMING-14#23 Critical Warning
+LUT on the clock tree  
+The LUT sensor/s_speed_reg[4]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
 Related violations: <none>
 
-TIMING-17#24 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_cnt_reg[28]/C is not reached by a timing clock
+TIMING-14#24 Critical Warning
+LUT on the clock tree  
+The LUT sensor/s_speed_reg[5]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
 Related violations: <none>
 
-TIMING-17#25 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_cnt_reg[29]/C is not reached by a timing clock
+TIMING-14#25 Critical Warning
+LUT on the clock tree  
+The LUT sensor/s_speed_reg[5]_LDC_i_6 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
 Related violations: <none>
 
-TIMING-17#26 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_cnt_reg[2]/C is not reached by a timing clock
+TIMING-14#26 Critical Warning
+LUT on the clock tree  
+The LUT sensor/s_speed_reg[6]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
 Related violations: <none>
 
-TIMING-17#27 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_cnt_reg[30]/C is not reached by a timing clock
+TIMING-14#27 Critical Warning
+LUT on the clock tree  
+The LUT sensor/s_speed_reg[7]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
 Related violations: <none>
 
-TIMING-17#28 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_cnt_reg[31]/C is not reached by a timing clock
+TIMING-14#28 Critical Warning
+LUT on the clock tree  
+The LUT sensor/s_speed_reg[8]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
 Related violations: <none>
 
-TIMING-17#29 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_cnt_reg[3]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#30 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_cnt_reg[4]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#31 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_cnt_reg[5]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#32 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_cnt_reg[6]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#33 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_cnt_reg[7]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#34 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_cnt_reg[8]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#35 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_cnt_reg[9]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#36 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_down_d_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#37 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_down_re_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#38 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_ok_d_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#39 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_ok_re_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#40 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_up_d_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#41 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/s_up_re_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#42 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/temp_down_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#43 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/temp_ok_reg[0]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#44 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/temp_ok_reg[1]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#45 Critical Warning
-Non-clocked sequential cell  
-The clock pin button_int/temp_up_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#46 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/calsdisp_o_reg[0]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#47 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/calsdisp_o_reg[10]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#48 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/calsdisp_o_reg[11]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#49 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/calsdisp_o_reg[12]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#50 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/calsdisp_o_reg[13]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#51 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/calsdisp_o_reg[14]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#52 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/calsdisp_o_reg[15]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#53 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/calsdisp_o_reg[1]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#54 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/calsdisp_o_reg[2]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#55 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/calsdisp_o_reg[3]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#56 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/calsdisp_o_reg[4]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#57 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/calsdisp_o_reg[5]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#58 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/calsdisp_o_reg[6]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#59 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/calsdisp_o_reg[7]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#60 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/calsdisp_o_reg[8]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#61 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/calsdisp_o_reg[9]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#62 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_total_reg[0]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#63 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_total_reg[10]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#64 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_total_reg[11]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#65 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_total_reg[12]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#66 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_total_reg[13]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#67 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_total_reg[14]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#68 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_total_reg[15]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#69 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_total_reg[16]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#70 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_total_reg[17]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#71 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_total_reg[18]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#72 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_total_reg[19]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#73 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_total_reg[1]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#74 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_total_reg[20]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#75 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_total_reg[21]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#76 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_total_reg[22]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#77 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_total_reg[23]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#78 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_total_reg[24]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#79 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_total_reg[25]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#80 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_total_reg[26]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#81 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_total_reg[27]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#82 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_total_reg[28]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#83 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_total_reg[29]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#84 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_total_reg[2]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#85 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_total_reg[30]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#86 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_total_reg[31]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#87 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_total_reg[3]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#88 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_total_reg[4]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#89 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_total_reg[5]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#90 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_total_reg[6]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#91 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_total_reg[7]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#92 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_total_reg[8]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#93 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_total_reg[9]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#94 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_trip_reg[0]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#95 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_trip_reg[10]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#96 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_trip_reg[11]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#97 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_trip_reg[12]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#98 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_trip_reg[13]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#99 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_trip_reg[14]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#100 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_trip_reg[15]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#101 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_trip_reg[16]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#102 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_trip_reg[17]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#103 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_trip_reg[18]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#104 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_trip_reg[19]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#105 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_trip_reg[1]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#106 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_trip_reg[20]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#107 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_trip_reg[21]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#108 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_trip_reg[22]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#109 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_trip_reg[23]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#110 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_trip_reg[24]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#111 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_trip_reg[25]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#112 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_trip_reg[26]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#113 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_trip_reg[27]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#114 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_trip_reg[28]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#115 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_trip_reg[29]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#116 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_trip_reg[2]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#117 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_trip_reg[30]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#118 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_trip_reg[31]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#119 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_trip_reg[3]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#120 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_trip_reg[4]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#121 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_trip_reg[5]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#122 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_trip_reg[6]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#123 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_trip_reg[7]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#124 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_trip_reg[8]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#125 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_counter_trip_reg[9]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#126 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_total_reg[0]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#127 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_total_reg[10]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#128 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_total_reg[11]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#129 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_total_reg[12]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#130 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_total_reg[13]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#131 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_total_reg[14]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#132 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_total_reg[15]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#133 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_total_reg[16]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#134 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_total_reg[17]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#135 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_total_reg[18]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#136 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_total_reg[19]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#137 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_total_reg[1]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#138 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_total_reg[20]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#139 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_total_reg[21]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#140 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_total_reg[22]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#141 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_total_reg[23]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#142 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_total_reg[24]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#143 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_total_reg[25]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#144 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_total_reg[26]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#145 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_total_reg[27]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#146 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_total_reg[28]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#147 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_total_reg[29]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#148 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_total_reg[2]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#149 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_total_reg[30]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#150 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_total_reg[31]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#151 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_total_reg[3]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#152 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_total_reg[4]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#153 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_total_reg[5]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#154 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_total_reg[6]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#155 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_total_reg[7]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#156 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_total_reg[8]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#157 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_total_reg[9]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#158 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_trip_reg[0]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#159 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_trip_reg[10]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#160 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_trip_reg[11]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#161 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_trip_reg[12]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#162 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_trip_reg[13]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#163 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_trip_reg[14]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#164 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_trip_reg[15]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#165 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_trip_reg[16]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#166 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_trip_reg[17]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#167 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_trip_reg[18]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#168 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_trip_reg[19]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#169 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_trip_reg[1]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#170 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_trip_reg[20]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#171 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_trip_reg[21]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#172 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_trip_reg[22]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#173 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_trip_reg[23]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#174 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_trip_reg[24]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#175 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_trip_reg[25]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#176 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_trip_reg[26]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#177 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_trip_reg[27]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#178 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_trip_reg[28]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#179 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_trip_reg[29]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#180 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_trip_reg[2]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#181 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_trip_reg[30]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#182 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_trip_reg[31]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#183 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_trip_reg[3]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#184 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_trip_reg[4]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#185 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_trip_reg[5]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#186 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_trip_reg[6]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#187 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_trip_reg[7]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#188 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_trip_reg[8]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#189 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_klik_trip_reg[9]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#190 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_temp_total_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#191 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_temp_trip_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#192 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_total_reg[0]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#193 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_total_reg[10]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#194 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_total_reg[11]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#195 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_total_reg[12]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#196 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_total_reg[13]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#197 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_total_reg[14]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#198 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_total_reg[15]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#199 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_total_reg[16]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#200 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_total_reg[17]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#201 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_total_reg[18]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#202 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_total_reg[19]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#203 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_total_reg[1]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#204 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_total_reg[20]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#205 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_total_reg[21]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#206 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_total_reg[22]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#207 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_total_reg[23]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#208 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_total_reg[24]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#209 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_total_reg[25]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#210 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_total_reg[26]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#211 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_total_reg[27]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#212 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_total_reg[28]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#213 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_total_reg[29]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#214 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_total_reg[2]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#215 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_total_reg[30]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#216 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_total_reg[31]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#217 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_total_reg[3]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#218 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_total_reg[4]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#219 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_total_reg[5]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#220 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_total_reg[6]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#221 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_total_reg[7]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#222 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_total_reg[8]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#223 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_total_reg[9]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#224 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_trip_reg[0]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#225 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_trip_reg[10]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#226 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_trip_reg[11]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#227 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_trip_reg[12]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#228 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_trip_reg[13]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#229 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_trip_reg[14]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#230 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_trip_reg[15]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#231 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_trip_reg[16]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#232 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_trip_reg[17]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#233 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_trip_reg[18]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#234 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_trip_reg[19]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#235 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_trip_reg[1]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#236 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_trip_reg[20]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#237 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_trip_reg[21]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#238 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_trip_reg[22]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#239 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_trip_reg[23]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#240 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_trip_reg[24]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#241 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_trip_reg[25]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#242 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_trip_reg[26]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#243 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_trip_reg[27]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#244 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_trip_reg[28]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#245 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_trip_reg[29]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#246 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_trip_reg[2]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#247 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_trip_reg[30]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#248 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_trip_reg[31]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#249 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_trip_reg[3]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#250 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_trip_reg[4]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#251 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_trip_reg[5]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#252 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_trip_reg[6]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#253 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_trip_reg[7]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#254 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_trip_reg[8]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#255 Critical Warning
-Non-clocked sequential cell  
-The clock pin calories/s_tempp_trip_reg[9]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#256 Critical Warning
-Non-clocked sequential cell  
-The clock pin driver_seg_4/bin_cnt0/s_cnt_local_reg[0]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#257 Critical Warning
-Non-clocked sequential cell  
-The clock pin driver_seg_4/bin_cnt0/s_cnt_local_reg[1]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#258 Critical Warning
-Non-clocked sequential cell  
-The clock pin driver_seg_4/clk_en0/ce_o_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#259 Critical Warning
-Non-clocked sequential cell  
-The clock pin driver_seg_4/clk_en0/s_cnt_local_reg[0]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#260 Critical Warning
-Non-clocked sequential cell  
-The clock pin driver_seg_4/clk_en0/s_cnt_local_reg[10]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#261 Critical Warning
-Non-clocked sequential cell  
-The clock pin driver_seg_4/clk_en0/s_cnt_local_reg[11]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#262 Critical Warning
-Non-clocked sequential cell  
-The clock pin driver_seg_4/clk_en0/s_cnt_local_reg[12]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#263 Critical Warning
-Non-clocked sequential cell  
-The clock pin driver_seg_4/clk_en0/s_cnt_local_reg[13]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#264 Critical Warning
-Non-clocked sequential cell  
-The clock pin driver_seg_4/clk_en0/s_cnt_local_reg[14]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#265 Critical Warning
-Non-clocked sequential cell  
-The clock pin driver_seg_4/clk_en0/s_cnt_local_reg[15]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#266 Critical Warning
-Non-clocked sequential cell  
-The clock pin driver_seg_4/clk_en0/s_cnt_local_reg[16]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#267 Critical Warning
-Non-clocked sequential cell  
-The clock pin driver_seg_4/clk_en0/s_cnt_local_reg[17]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#268 Critical Warning
-Non-clocked sequential cell  
-The clock pin driver_seg_4/clk_en0/s_cnt_local_reg[18]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#269 Critical Warning
-Non-clocked sequential cell  
-The clock pin driver_seg_4/clk_en0/s_cnt_local_reg[19]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#270 Critical Warning
-Non-clocked sequential cell  
-The clock pin driver_seg_4/clk_en0/s_cnt_local_reg[1]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#271 Critical Warning
-Non-clocked sequential cell  
-The clock pin driver_seg_4/clk_en0/s_cnt_local_reg[20]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#272 Critical Warning
-Non-clocked sequential cell  
-The clock pin driver_seg_4/clk_en0/s_cnt_local_reg[21]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#273 Critical Warning
-Non-clocked sequential cell  
-The clock pin driver_seg_4/clk_en0/s_cnt_local_reg[22]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#274 Critical Warning
-Non-clocked sequential cell  
-The clock pin driver_seg_4/clk_en0/s_cnt_local_reg[23]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#275 Critical Warning
-Non-clocked sequential cell  
-The clock pin driver_seg_4/clk_en0/s_cnt_local_reg[24]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#276 Critical Warning
-Non-clocked sequential cell  
-The clock pin driver_seg_4/clk_en0/s_cnt_local_reg[25]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#277 Critical Warning
-Non-clocked sequential cell  
-The clock pin driver_seg_4/clk_en0/s_cnt_local_reg[26]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#278 Critical Warning
-Non-clocked sequential cell  
-The clock pin driver_seg_4/clk_en0/s_cnt_local_reg[27]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#279 Critical Warning
-Non-clocked sequential cell  
-The clock pin driver_seg_4/clk_en0/s_cnt_local_reg[28]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#280 Critical Warning
-Non-clocked sequential cell  
-The clock pin driver_seg_4/clk_en0/s_cnt_local_reg[29]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#281 Critical Warning
-Non-clocked sequential cell  
-The clock pin driver_seg_4/clk_en0/s_cnt_local_reg[2]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#282 Critical Warning
-Non-clocked sequential cell  
-The clock pin driver_seg_4/clk_en0/s_cnt_local_reg[30]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#283 Critical Warning
-Non-clocked sequential cell  
-The clock pin driver_seg_4/clk_en0/s_cnt_local_reg[3]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#284 Critical Warning
-Non-clocked sequential cell  
-The clock pin driver_seg_4/clk_en0/s_cnt_local_reg[4]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#285 Critical Warning
-Non-clocked sequential cell  
-The clock pin driver_seg_4/clk_en0/s_cnt_local_reg[5]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#286 Critical Warning
-Non-clocked sequential cell  
-The clock pin driver_seg_4/clk_en0/s_cnt_local_reg[6]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#287 Critical Warning
-Non-clocked sequential cell  
-The clock pin driver_seg_4/clk_en0/s_cnt_local_reg[7]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#288 Critical Warning
-Non-clocked sequential cell  
-The clock pin driver_seg_4/clk_en0/s_cnt_local_reg[8]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#289 Critical Warning
-Non-clocked sequential cell  
-The clock pin driver_seg_4/clk_en0/s_cnt_local_reg[9]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#290 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/data_o_reg[0]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#291 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/data_o_reg[10]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#292 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/data_o_reg[11]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#293 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/data_o_reg[12]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#294 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/data_o_reg[13]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#295 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/data_o_reg[14]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#296 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/data_o_reg[15]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#297 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/data_o_reg[1]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#298 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/data_o_reg[2]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#299 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/data_o_reg[3]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#300 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/data_o_reg[4]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#301 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/data_o_reg[5]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#302 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/data_o_reg[6]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#303 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/data_o_reg[7]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#304 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/data_o_reg[8]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#305 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/data_o_reg[9]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#306 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/p_cnt.km_total_reg[0]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#307 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/p_cnt.km_total_reg[10]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#308 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/p_cnt.km_total_reg[11]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#309 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/p_cnt.km_total_reg[12]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#310 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/p_cnt.km_total_reg[13]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#311 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/p_cnt.km_total_reg[1]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#312 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/p_cnt.km_total_reg[2]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#313 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/p_cnt.km_total_reg[3]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#314 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/p_cnt.km_total_reg[4]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#315 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/p_cnt.km_total_reg[5]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#316 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/p_cnt.km_total_reg[6]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#317 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/p_cnt.km_total_reg[7]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#318 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/p_cnt.km_total_reg[8]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#319 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/p_cnt.km_total_reg[9]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#320 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/p_cnt.km_trip_reg[0]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#321 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/p_cnt.km_trip_reg[10]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#322 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/p_cnt.km_trip_reg[11]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#323 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/p_cnt.km_trip_reg[12]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#324 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/p_cnt.km_trip_reg[13]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#325 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/p_cnt.km_trip_reg[1]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#326 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/p_cnt.km_trip_reg[2]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#327 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/p_cnt.km_trip_reg[3]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#328 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/p_cnt.km_trip_reg[4]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#329 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/p_cnt.km_trip_reg[5]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#330 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/p_cnt.km_trip_reg[6]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#331 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/p_cnt.km_trip_reg[7]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#332 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/p_cnt.km_trip_reg[8]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#333 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/p_cnt.km_trip_reg[9]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#334 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/s_meters_d_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#335 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/s_meters_re_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#336 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/s_mode_d_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#337 Critical Warning
-Non-clocked sequential cell  
-The clock pin km_total/s_mode_re_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#338 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/disp_o_reg[10]_P/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#339 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/disp_o_reg[11]_P/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#340 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/disp_o_reg[12]_P/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#341 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/disp_o_reg[13]_P/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#342 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/disp_o_reg[14]_P/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#343 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/disp_o_reg[15]_P/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#344 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/disp_o_reg[1]_P/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#345 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/disp_o_reg[2]_P/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#346 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/disp_o_reg[3]_P/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#347 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/disp_o_reg[4]_P/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#348 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/disp_o_reg[5]_P/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#349 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/disp_o_reg[6]_P/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#350 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/disp_o_reg[7]_P/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#351 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/disp_o_reg[8]_P/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#352 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/disp_o_reg[9]_P/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#353 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/p_cnt.cnt_reg[0]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#354 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/p_cnt.cnt_reg[1]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#355 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/p_cnt.cnt_reg[2]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#356 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/p_cnt.cnt_reg[3]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#357 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/p_cnt.cnt_reg[4]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#358 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/p_cnt.cnt_reg[5]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#359 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_sensor_i_d_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#360 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_sensor_i_re_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#361 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[0]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#362 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[10]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#363 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[11]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#364 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[12]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#365 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[13]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#366 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[14]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#367 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[15]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#368 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[16]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#369 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[17]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#370 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[18]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#371 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[19]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#372 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[1]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#373 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[20]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#374 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[21]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#375 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[22]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#376 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[23]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#377 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[24]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#378 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[25]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#379 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[26]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#380 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[27]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#381 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[28]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#382 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[29]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#383 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[2]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#384 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[30]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#385 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[31]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#386 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[31]_rep/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#387 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[31]_rep__0/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#388 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[31]_rep__1/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#389 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[31]_rep__2/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#390 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[31]_rep__3/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#391 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[31]_rep__4/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#392 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[31]_rep__5/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#393 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[31]_rep__6/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#394 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[3]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#395 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[4]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#396 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[5]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#397 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[6]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#398 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[7]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#399 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[8]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#400 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_cnt_reg[9]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#401 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_reg[10]_P/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#402 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_reg[11]_P/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#403 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_reg[12]_P/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#404 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_reg[13]_P/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#405 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_reg[2]_P/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#406 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_reg[3]_P/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#407 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_reg[4]_P/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#408 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_reg[5]_P/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#409 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_reg[6]_P/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#410 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_reg[7]_P/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#411 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_reg[8]_P/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#412 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_speed_reg[9]_P/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#413 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/s_temp_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#414 Critical Warning
-Non-clocked sequential cell  
-The clock pin sensor/trigger_o_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#415 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/FSM_onehot_State_reg[0]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#416 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/FSM_onehot_State_reg[1]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#417 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/FSM_onehot_State_reg[2]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#418 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/FSM_onehot_State_reg[3]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#419 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/FSM_onehot_State_reg[4]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#420 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/LED_1_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#421 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/LED_3_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#422 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/LED_4_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#423 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/data_o_reg[0]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#424 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/data_o_reg[10]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#425 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/data_o_reg[11]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#426 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/data_o_reg[12]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#427 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/data_o_reg[13]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#428 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/data_o_reg[14]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#429 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/data_o_reg[15]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#430 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/data_o_reg[1]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#431 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/data_o_reg[2]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#432 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/data_o_reg[3]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#433 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/data_o_reg[4]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#434 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/data_o_reg[5]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#435 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/data_o_reg[6]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#436 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/data_o_reg[7]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#437 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/data_o_reg[8]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#438 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/data_o_reg[9]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#439 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/dd_o_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#440 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/dd_o_reg_lopt_replica/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#441 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/dp_o_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#442 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/mode_o_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#443 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/p_output.temp_trip_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#444 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/reset_1_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#445 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/reset_2_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#446 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/reset_3_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#447 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/reset_4_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#448 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/s_down_d_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#449 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/s_down_re_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#450 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/s_rst_d_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#451 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/s_rst_re_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#452 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/s_startstop_d_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#453 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/s_startstop_re_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#454 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/s_up_d_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#455 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/s_up_re_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#456 Critical Warning
-Non-clocked sequential cell  
-The clock pin state_machine/toggle_o_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#457 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/data_o_reg[0]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#458 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/data_o_reg[10]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#459 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/data_o_reg[11]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#460 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/data_o_reg[12]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#461 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/data_o_reg[13]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#462 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/data_o_reg[14]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#463 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/data_o_reg[1]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#464 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/data_o_reg[2]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#465 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/data_o_reg[3]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#466 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/data_o_reg[4]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#467 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/data_o_reg[5]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#468 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/data_o_reg[6]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#469 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/data_o_reg[8]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#470 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/data_o_reg[9]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#471 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.milis_reg[0]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#472 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.milis_reg[10]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#473 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.milis_reg[11]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#474 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.milis_reg[12]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#475 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.milis_reg[13]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#476 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.milis_reg[14]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#477 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.milis_reg[15]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#478 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.milis_reg[16]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#479 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.milis_reg[17]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#480 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.milis_reg[18]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#481 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.milis_reg[19]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#482 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.milis_reg[1]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#483 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.milis_reg[20]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#484 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.milis_reg[21]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#485 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.milis_reg[22]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#486 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.milis_reg[23]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#487 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.milis_reg[24]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#488 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.milis_reg[25]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#489 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.milis_reg[26]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#490 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.milis_reg[2]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#491 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.milis_reg[3]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#492 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.milis_reg[4]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#493 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.milis_reg[5]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#494 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.milis_reg[6]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#495 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.milis_reg[7]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#496 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.milis_reg[8]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#497 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.milis_reg[9]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#498 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.minutes_reg[1]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#499 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.minutes_reg[2]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#500 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.minutes_reg[3]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#501 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.minutes_reg[4]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#502 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.minutes_reg[5]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#503 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.running_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#504 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.seconds_reg[1]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#505 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.seconds_reg[2]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#506 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.seconds_reg[3]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#507 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.seconds_reg[4]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#508 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/p_cnt.seconds_reg[5]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#509 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/s_reset_d_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#510 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/s_reset_re_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#511 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/s_toggle_d_reg/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#512 Critical Warning
-Non-clocked sequential cell  
-The clock pin time_total/s_toggle_re_reg/C is not reached by a timing clock
+TIMING-14#29 Critical Warning
+LUT on the clock tree  
+The LUT sensor/s_speed_reg[9]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
 Related violations: <none>
 
 HPDR-1#1 Warning
@@ -2960,6 +548,481 @@ LUT drives async reset alert
 LUT cell sensor/s_speed_reg[9]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) sensor/s_speed_reg[9]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
+SYNTH-13#1 Warning
+combinational multiplier  
+Detected combinational multiplier in DSP instance calories/temp.
+Related violations: <none>
+
+SYNTH-13#2 Warning
+combinational multiplier  
+Detected combinational multiplier in DSP instance calories/temp__0.
+Related violations: <none>
+
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -1.019 ns between time_total/s_reset_re_reg/C (clocked by sys_clk_pin) and time_total/data_o_reg[12]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -1.144 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[0]_replica/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -1.159 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[0]_replica_1/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -1.318 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[31]_rep__2/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -1.333 ns between state_machine/mode_o_reg/C (clocked by sys_clk_pin) and km_total/data_o_reg[3]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -1.389 ns between state_machine/mode_o_reg/C (clocked by sys_clk_pin) and km_total/data_o_reg[12]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -1.446 ns between km_total/s_mode_re_reg/C (clocked by sys_clk_pin) and km_total/data_o_reg[10]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -1.446 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[24]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#9 Warning
+Large setup violation  
+There is a large setup violation of -1.446 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[25]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -1.446 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[26]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#11 Warning
+Large setup violation  
+There is a large setup violation of -1.446 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[27]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#12 Warning
+Large setup violation  
+There is a large setup violation of -1.467 ns between state_machine/mode_o_reg/C (clocked by sys_clk_pin) and km_total/data_o_reg[6]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#13 Warning
+Large setup violation  
+There is a large setup violation of -1.487 ns between km_total/s_mode_re_reg/C (clocked by sys_clk_pin) and km_total/data_o_reg[9]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#14 Warning
+Large setup violation  
+There is a large setup violation of -1.532 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[28]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#15 Warning
+Large setup violation  
+There is a large setup violation of -1.532 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[29]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#16 Warning
+Large setup violation  
+There is a large setup violation of -1.532 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[30]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#17 Warning
+Large setup violation  
+There is a large setup violation of -1.532 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[31]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#18 Warning
+Large setup violation  
+There is a large setup violation of -1.546 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[10]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#19 Warning
+Large setup violation  
+There is a large setup violation of -1.576 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[19]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#20 Warning
+Large setup violation  
+There is a large setup violation of -1.581 ns between km_total/s_mode_re_reg/C (clocked by sys_clk_pin) and km_total/data_o_reg[11]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#21 Warning
+Large setup violation  
+There is a large setup violation of -1.610 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[14]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#22 Warning
+Large setup violation  
+There is a large setup violation of -1.615 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[11]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#23 Warning
+Large setup violation  
+There is a large setup violation of -1.615 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[7]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#24 Warning
+Large setup violation  
+There is a large setup violation of -1.615 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[9]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#25 Warning
+Large setup violation  
+There is a large setup violation of -1.652 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[15]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#26 Warning
+Large setup violation  
+There is a large setup violation of -1.652 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[17]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#27 Warning
+Large setup violation  
+There is a large setup violation of -1.671 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[1]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#28 Warning
+Large setup violation  
+There is a large setup violation of -1.671 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[2]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#29 Warning
+Large setup violation  
+There is a large setup violation of -1.671 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[3]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#30 Warning
+Large setup violation  
+There is a large setup violation of -1.674 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[31]_rep__0/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#31 Warning
+Large setup violation  
+There is a large setup violation of -1.693 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[4]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#32 Warning
+Large setup violation  
+There is a large setup violation of -1.697 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[0]_replica_4/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#33 Warning
+Large setup violation  
+There is a large setup violation of -1.704 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[21]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#34 Warning
+Large setup violation  
+There is a large setup violation of -1.704 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[22]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#35 Warning
+Large setup violation  
+There is a large setup violation of -1.704 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[23]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#36 Warning
+Large setup violation  
+There is a large setup violation of -1.718 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[18]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#37 Warning
+Large setup violation  
+There is a large setup violation of -1.738 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[13]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#38 Warning
+Large setup violation  
+There is a large setup violation of -1.738 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[16]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#39 Warning
+Large setup violation  
+There is a large setup violation of -1.738 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[20]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#40 Warning
+Large setup violation  
+There is a large setup violation of -1.739 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[31]_rep__1/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#41 Warning
+Large setup violation  
+There is a large setup violation of -1.840 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[0]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#42 Warning
+Large setup violation  
+There is a large setup violation of -1.840 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[5]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#43 Warning
+Large setup violation  
+There is a large setup violation of -1.850 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[12]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#44 Warning
+Large setup violation  
+There is a large setup violation of -1.850 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[8]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#45 Warning
+Large setup violation  
+There is a large setup violation of -1.935 ns between sensor/s_speed_cnt_reg[1]/C (clocked by sys_clk_pin) and sensor/s_speed_cnt_reg[6]/R (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#46 Warning
+Large setup violation  
+There is a large setup violation of -15.499 ns between calories/s_counter_trip_reg[10]/C (clocked by sys_clk_pin) and calories/calsdisp_o_reg[0]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#47 Warning
+Large setup violation  
+There is a large setup violation of -20.025 ns between calories/s_counter_trip_reg[10]/C (clocked by sys_clk_pin) and calories/calsdisp_o_reg[13]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#48 Warning
+Large setup violation  
+There is a large setup violation of -20.186 ns between calories/s_counter_trip_reg[10]/C (clocked by sys_clk_pin) and calories/calsdisp_o_reg[15]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#49 Warning
+Large setup violation  
+There is a large setup violation of -20.269 ns between calories/s_counter_trip_reg[10]/C (clocked by sys_clk_pin) and calories/calsdisp_o_reg[3]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#50 Warning
+Large setup violation  
+There is a large setup violation of -20.358 ns between calories/s_counter_trip_reg[10]/C (clocked by sys_clk_pin) and calories/calsdisp_o_reg[14]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#51 Warning
+Large setup violation  
+There is a large setup violation of -20.440 ns between calories/s_counter_trip_reg[10]/C (clocked by sys_clk_pin) and calories/calsdisp_o_reg[5]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#52 Warning
+Large setup violation  
+There is a large setup violation of -20.457 ns between calories/s_counter_trip_reg[10]/C (clocked by sys_clk_pin) and calories/calsdisp_o_reg[2]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#53 Warning
+Large setup violation  
+There is a large setup violation of -20.534 ns between calories/s_counter_trip_reg[10]/C (clocked by sys_clk_pin) and calories/calsdisp_o_reg[1]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#54 Warning
+Large setup violation  
+There is a large setup violation of -20.536 ns between calories/s_counter_trip_reg[10]/C (clocked by sys_clk_pin) and calories/calsdisp_o_reg[4]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#55 Warning
+Large setup violation  
+There is a large setup violation of -20.624 ns between calories/s_counter_trip_reg[10]/C (clocked by sys_clk_pin) and calories/calsdisp_o_reg[7]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#56 Warning
+Large setup violation  
+There is a large setup violation of -20.772 ns between calories/s_counter_trip_reg[10]/C (clocked by sys_clk_pin) and calories/calsdisp_o_reg[6]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#57 Warning
+Large setup violation  
+There is a large setup violation of -20.781 ns between calories/s_counter_trip_reg[10]/C (clocked by sys_clk_pin) and calories/calsdisp_o_reg[8]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#58 Warning
+Large setup violation  
+There is a large setup violation of -20.887 ns between calories/s_counter_trip_reg[10]/C (clocked by sys_clk_pin) and calories/calsdisp_o_reg[11]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#59 Warning
+Large setup violation  
+There is a large setup violation of -21.134 ns between calories/s_counter_trip_reg[10]/C (clocked by sys_clk_pin) and calories/calsdisp_o_reg[12]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#60 Warning
+Large setup violation  
+There is a large setup violation of -21.337 ns between calories/s_counter_trip_reg[10]/C (clocked by sys_clk_pin) and calories/calsdisp_o_reg[9]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#61 Warning
+Large setup violation  
+There is a large setup violation of -21.358 ns between calories/s_counter_trip_reg[10]/C (clocked by sys_clk_pin) and calories/calsdisp_o_reg[10]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on ja[0] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on ja[1] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An input delay is missing on ja[2] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An input delay is missing on ja[3] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#5 Warning
+Missing input or output delay  
+An input delay is missing on ja[4] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#6 Warning
+Missing input or output delay  
+An input delay is missing on ja[5] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#7 Warning
+Missing input or output delay  
+An input delay is missing on ja[6] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#8 Warning
+Missing input or output delay  
+An input delay is missing on ja[7] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#9 Warning
+Missing input or output delay  
+An input delay is missing on jb[0] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#10 Warning
+Missing input or output delay  
+An input delay is missing on jb[1] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#11 Warning
+Missing input or output delay  
+An input delay is missing on jb[2] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#12 Warning
+Missing input or output delay  
+An input delay is missing on jb[3] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#13 Warning
+Missing input or output delay  
+An input delay is missing on jb[4] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#14 Warning
+Missing input or output delay  
+An input delay is missing on jb[5] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#15 Warning
+Missing input or output delay  
+An input delay is missing on jb[6] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#16 Warning
+Missing input or output delay  
+An input delay is missing on jb[7] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#17 Warning
+Missing input or output delay  
+An input delay is missing on jc[0] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#18 Warning
+Missing input or output delay  
+An input delay is missing on jc[1] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#19 Warning
+Missing input or output delay  
+An input delay is missing on jc[2] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#20 Warning
+Missing input or output delay  
+An input delay is missing on jc[3] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#21 Warning
+Missing input or output delay  
+An input delay is missing on jc[4] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#22 Warning
+Missing input or output delay  
+An input delay is missing on jc[5] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#23 Warning
+Missing input or output delay  
+An input delay is missing on jc[6] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#24 Warning
+Missing input or output delay  
+An input delay is missing on jc[7] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#25 Warning
+Missing input or output delay  
+An input delay is missing on jd[0] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#26 Warning
+Missing input or output delay  
+An input delay is missing on jd[1] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#27 Warning
+Missing input or output delay  
+An input delay is missing on jd[2] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#28 Warning
+Missing input or output delay  
+An input delay is missing on jd[3] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#29 Warning
+Missing input or output delay  
+An input delay is missing on jd[4] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#30 Warning
+Missing input or output delay  
+An input delay is missing on jd[5] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#31 Warning
+Missing input or output delay  
+An input delay is missing on jd[6] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#32 Warning
+Missing input or output delay  
+An input delay is missing on jd[7] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
 TIMING-20#1 Warning
 Non-clocked latch  
 The latch button_int/st_o_reg cannot be properly analyzed as its control pin button_int/st_o_reg/G is not reached by a timing clock
@@ -2968,141 +1031,6 @@ Related violations: <none>
 TIMING-20#2 Warning
 Non-clocked latch  
 The latch driver_seg_4/dp_o_reg cannot be properly analyzed as its control pin driver_seg_4/dp_o_reg/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#3 Warning
-Non-clocked latch  
-The latch sensor/disp_o_reg[10]_LDC cannot be properly analyzed as its control pin sensor/disp_o_reg[10]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#4 Warning
-Non-clocked latch  
-The latch sensor/disp_o_reg[11]_LDC cannot be properly analyzed as its control pin sensor/disp_o_reg[11]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#5 Warning
-Non-clocked latch  
-The latch sensor/disp_o_reg[12]_LDC cannot be properly analyzed as its control pin sensor/disp_o_reg[12]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#6 Warning
-Non-clocked latch  
-The latch sensor/disp_o_reg[13]_LDC cannot be properly analyzed as its control pin sensor/disp_o_reg[13]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#7 Warning
-Non-clocked latch  
-The latch sensor/disp_o_reg[14]_LDC cannot be properly analyzed as its control pin sensor/disp_o_reg[14]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#8 Warning
-Non-clocked latch  
-The latch sensor/disp_o_reg[15]_LDC cannot be properly analyzed as its control pin sensor/disp_o_reg[15]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#9 Warning
-Non-clocked latch  
-The latch sensor/disp_o_reg[1]_LDC cannot be properly analyzed as its control pin sensor/disp_o_reg[1]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#10 Warning
-Non-clocked latch  
-The latch sensor/disp_o_reg[2]_LDC cannot be properly analyzed as its control pin sensor/disp_o_reg[2]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#11 Warning
-Non-clocked latch  
-The latch sensor/disp_o_reg[3]_LDC cannot be properly analyzed as its control pin sensor/disp_o_reg[3]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#12 Warning
-Non-clocked latch  
-The latch sensor/disp_o_reg[4]_LDC cannot be properly analyzed as its control pin sensor/disp_o_reg[4]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#13 Warning
-Non-clocked latch  
-The latch sensor/disp_o_reg[5]_LDC cannot be properly analyzed as its control pin sensor/disp_o_reg[5]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#14 Warning
-Non-clocked latch  
-The latch sensor/disp_o_reg[6]_LDC cannot be properly analyzed as its control pin sensor/disp_o_reg[6]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#15 Warning
-Non-clocked latch  
-The latch sensor/disp_o_reg[7]_LDC cannot be properly analyzed as its control pin sensor/disp_o_reg[7]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#16 Warning
-Non-clocked latch  
-The latch sensor/disp_o_reg[8]_LDC cannot be properly analyzed as its control pin sensor/disp_o_reg[8]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#17 Warning
-Non-clocked latch  
-The latch sensor/disp_o_reg[9]_LDC cannot be properly analyzed as its control pin sensor/disp_o_reg[9]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#18 Warning
-Non-clocked latch  
-The latch sensor/s_speed_reg[10]_LDC cannot be properly analyzed as its control pin sensor/s_speed_reg[10]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#19 Warning
-Non-clocked latch  
-The latch sensor/s_speed_reg[11]_LDC cannot be properly analyzed as its control pin sensor/s_speed_reg[11]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#20 Warning
-Non-clocked latch  
-The latch sensor/s_speed_reg[12]_LDC cannot be properly analyzed as its control pin sensor/s_speed_reg[12]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#21 Warning
-Non-clocked latch  
-The latch sensor/s_speed_reg[13]_LDC cannot be properly analyzed as its control pin sensor/s_speed_reg[13]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#22 Warning
-Non-clocked latch  
-The latch sensor/s_speed_reg[2]_LDC cannot be properly analyzed as its control pin sensor/s_speed_reg[2]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#23 Warning
-Non-clocked latch  
-The latch sensor/s_speed_reg[3]_LDC cannot be properly analyzed as its control pin sensor/s_speed_reg[3]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#24 Warning
-Non-clocked latch  
-The latch sensor/s_speed_reg[4]_LDC cannot be properly analyzed as its control pin sensor/s_speed_reg[4]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#25 Warning
-Non-clocked latch  
-The latch sensor/s_speed_reg[5]_LDC cannot be properly analyzed as its control pin sensor/s_speed_reg[5]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#26 Warning
-Non-clocked latch  
-The latch sensor/s_speed_reg[6]_LDC cannot be properly analyzed as its control pin sensor/s_speed_reg[6]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#27 Warning
-Non-clocked latch  
-The latch sensor/s_speed_reg[7]_LDC cannot be properly analyzed as its control pin sensor/s_speed_reg[7]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#28 Warning
-Non-clocked latch  
-The latch sensor/s_speed_reg[8]_LDC cannot be properly analyzed as its control pin sensor/s_speed_reg[8]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#29 Warning
-Non-clocked latch  
-The latch sensor/s_speed_reg[9]_LDC cannot be properly analyzed as its control pin sensor/s_speed_reg[9]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 

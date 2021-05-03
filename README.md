@@ -189,7 +189,7 @@ This block also contains a **function** which converts the traveled distance fro
    - TOP module represents the whole project
    - Final test schema can be seen below:
    ![image](images/top_tachometer.svg)
-   - After having **main board** and **hall sensor board** done, software can be written into Arty A7 board
+   - After having **main board** and **hall sensor board** done, software can be written into Arty A7 board. Generated bitstream is available [here](sw\tachometer\tachometer.runs\impl_1\top.bit).
    ![image](images/implementation_completed.png)
 
 ## Video
