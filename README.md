@@ -3,7 +3,7 @@
 ![image](images/fekt_logo.png) <br/>
 **Title:** Project 2021 <br/>
 **Topic:** 3. Console for bike with hall sensor, measuring and displaying speed, traveled distance and burnt calories <br/>
-**Time Windown:** 
+**Time Window:** 
    - *Start of Project*: *April 7*
    - *End of Project*:   *May 4* <br/>
 
