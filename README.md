@@ -10,8 +10,7 @@
 **Supervisor:** **_doc. Ing. Tomáš Frýza, Ph.D._** <br/>
 **Vivado Teachers:** **_doc. Ing. Tomáš Frýza, Ph.D._**, **_Ing. Stanislav Rozum_**
 
-
-
+# 3. Console for bike with hall sensor, measuring and displaying speed, traveled distance and burnt calories
 
 ### Team members
 
