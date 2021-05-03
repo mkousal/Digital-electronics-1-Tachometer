@@ -141,7 +141,7 @@ This block also contains a **function** which converts the traveled distance fro
    ![image](images/state_machine_bench.png) 
 
 #### `total_time`:
-   - Fincionality of total time counting is shown by this signals
+   - Funcionality of total time counting is shown by this signals
    - In order to save time and make the inner working of this device more clear, all simulated data has been sped up
    ![image](images/total_time_bench.png) 
 
