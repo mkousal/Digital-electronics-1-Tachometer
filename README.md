@@ -211,7 +211,6 @@ This block also contains a **function** which converts the traveled distance fro
    - [VSCode]( https://code.visualstudio.com/)
    - [KiCad]( https://www.kicad.org/)
    - [EdaPlayGround]( https://www.edaplayground.com/)
-   - [Xilinx Vivado 2020]( https://www.xilinx.com/products/design-tools/vivado.html)
    - [Vivado tutorials]( https://vhdlwhiz.com/basic-vhdl-tutorials/ )
    - [Tutorial from Xilinx]( https://www.xilinx.com/support/documentation/university/Vivado-Teaching/HDL-Design/2013x/Nexys4/Verilog/docs-pdf/Vivado_tutorial.pdf)
    - [Board Editor]( https://jamboard.google.com/)
