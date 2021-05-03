@@ -73,7 +73,7 @@ This block also contains a **function** which converts the traveled distance fro
    - *Reset* will reset the total time. 
    - When the *trip mode* is enabled, the stopwatch will automatically start counting the trip time and will reset before every trip is started. 
  
- This block also contains a function which converts the total time from *binary integer* to *BCD code* to be displayed on the 4 digit 7 segment display.
+ This block also contains a **function** which converts the total time from *binary integer* to *BCD code* to be displayed on the 4 digit 7 segment display.
 
 ### SENSOR <br/>
 #### `sensor`:
