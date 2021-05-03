@@ -127,22 +127,22 @@ This block also contains a **function** which converts the traveled distance fro
 ## Testbenches and simulations
 #### `Button_int`:
    - Shows states of `button_int` block
-   - In order to save time and make the inner working of this device more clear, all simulated data has been sped up.   
+   - In order to save time and make the inner working of this device more clear, all simulated data has been speedded up.   
    ![image](images/button_int_bench.png)
 
 #### `km_total`:
    - Screenshot demos how the counting works. 
-   - In order to save time and make the inner working of this device more clear, all simulated data has been sped up. 
+   - In order to save time and make the inner working of this device more clear, all simulated data has been speedded up. 
    ![image](images/km_total_bench.png) 
    
 #### `state_machine`:
    - Screenshot below represents testbench of main unit
-   - In order to save time and make the inner working of this device more clear, all simulated data has been sped up. 
+   - In order to save time and make the inner working of this device more clear, all simulated data has been speedded up. 
    ![image](images/state_machine_bench.png) 
 
 #### `total_time`:
    - Fincionality of total time counting is shown by this signals.
-   - In order to save time and make the inner working of this device more clear, all simulated data has been sped up.
+   - In order to save time and make the inner working of this device more clear, all simulated data has been speedded up.
    ![image](images/total_time_bench.png) 
 
 #### `sensor`: <br/>
@@ -209,6 +209,7 @@ This block also contains a **function** which converts the traveled distance fro
    - [Xilinx Vivado 2020]( https://www.xilinx.com/products/design-tools/vivado.html)
    - [VSCode]( https://code.visualstudio.com/)
    - [KiCad]( https://www.kicad.org/)
+   - [EdaPlayGround]( https://www.edaplayground.com/)
    - [Xilinx Vivado 2020]( https://www.xilinx.com/products/design-tools/vivado.html)
    - [7 Segment Display]( https://docs.rs-online.com/6e0e/0900766b8130126b.pdf)
    - [Vivado tutorials]( https://vhdlwhiz.com/basic-vhdl-tutorials/ )
