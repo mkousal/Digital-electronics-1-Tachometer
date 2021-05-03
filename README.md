@@ -4,8 +4,8 @@
 
 - **Martin Kousal**, **ID=** *221063* <br/> 
 [Link to GitHub project folder]( http://github.com/mkousal/Digital-electronics-1-Tachometer) <br/> 
-- **Matej Ledvina**, **ID=** *22xxxx* <br/> 
-xxx[Link to GitHub project folder]( http://github.com/xxx) <br/> 
+- **Matej Ledvina**, **ID=** *221339* <br/> 
+xxx[Link to GitHub project folder]( https://github.com/Ledvuk/Digital-electronics-1) <br/> 
 - **Tomáš Kříčka**, **ID=**  *223283* <br/> 
 [Link to GitHub]( https://github.com/TomasKricka) <br/> 
 - **Samuel Košík**, **ID=** *221056* <br/>
@@ -55,7 +55,7 @@ This data is shown on four 7segment displays (one part).
 #### `DRIVER_4X7SEG`:
    Main module, drives four 7segment displays. It is determinated by `CLOCK` and `UP_DOWN_COUNTER`.<br/>
    Process MUX uses above modules to set data_outputs to each 7segment display. <br/>
-   Input is a 16bit std_vector (`b"xxxx xxxx xxxx xxxx"`)
+   Input is a 16bit unsigned (`b"xxxx xxxx xxxx xxxx"`)
 #### `DECODER_7SEG`:
    This module is used for displaying data on 7segment display. If have more displays, MUX has to be used. <br/>
    Both, common cathode and common anode can be used as well.
