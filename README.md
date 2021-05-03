@@ -203,8 +203,7 @@ This block also contains a **function** which converts the traveled distance fro
    - Theoretical knowledge from Digital-Electronics-1 Labs, 2021 > [Link]( https://github.com/tomas-fryza/Digital-electronics-1/tree/master/Labs)
    - Labs from classes **DE1** 
    - DE1 Lecture PDF > [Link]( https://moodle.vutbr.cz/pluginfile.php/331523/mod_resource/content/3/DE1_lecture_part4_CZE.pdf)
-   -
-   -
+ 
    ### Used programs and its links:
    - [Xilinx Vivado 2020]( https://www.xilinx.com/products/design-tools/vivado.html)
    - [VSCode]( https://code.visualstudio.com/)
