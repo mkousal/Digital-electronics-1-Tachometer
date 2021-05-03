@@ -190,7 +190,7 @@ This block also contains a **function** which converts the traveled distance fro
    - Final test schema can be seen below:
    ![image](images/top_tachometer.svg)
    - After having **main board** and **hall sensor board** done, software can be written into Arty A7 board
-   ![image](images/implementation_completed.svg)
+   ![image](images/implementation_completed.png)
 
 ## Video
 
