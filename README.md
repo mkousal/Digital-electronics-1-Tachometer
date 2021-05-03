@@ -32,8 +32,7 @@ This data is shown on four 7segment displays (one part).
    - Used seven segment display with middle double dot and dots for decimal is TDCG1050m - [datasheet](https://www.vishay.com/docs/83180/tdcx10x0m.pdf)
 
    ### Hall sensor board
-   ![image](images/encoderBoard_front.png)
-   ![image](images/encoderBoard_back.png)
+   ![image](images/encoderBoard_front.png)   ![image](images/encoderBoard_back.png)
    - [Schematic](files/encoderBoard_schematic.pdf)
    - Hall sensor board only consists of hall sensor and a few passive components that are described in datasheet and connector.
    - You can screw it by using M3 screw to your bicycle.
