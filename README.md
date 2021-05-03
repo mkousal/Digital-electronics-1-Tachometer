@@ -1,12 +1,12 @@
 # DIGITAL ELECTRONICS 1
 **2021**, Faculty of Electrical Engineering and Communication [FEKT](https://www.fekt.vut.cz/) <br/> 
-![image](images/fekt_logo.png)
+![image](images/fekt_logo.png) <br/>
 **Title:** Project 2021 <br/>
 **Topic:** 3. Console for bike with hall sensor, measuring and displaying speed, traveled distance and burnt calories <br/>
-**Time Windown:** 
+**Time Windown:** <br/>
    - *Start of Project*: *April 7*
-   - *End of Project*:   *May 4*
-**Supervisor:** **_doc. Ing. Tomáš Frýza, Ph.D._**
+   - *End of Project*:   *May 4* <br/>
+**Supervisor:** **_doc. Ing. Tomáš Frýza, Ph.D._** <br/>
 **Vivado Teachers:** **_doc. Ing. Tomáš Frýza, Ph.D._**, **_Ing. Stanislav Rozum_**
 
 
