@@ -19,7 +19,9 @@ This data is shown on four 7segment displays (one part).
  - Total time
  - Total distance traveled
  -  
-
+Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![image](images/arty_a7.png = 250x250)  |  ![image](images/arty_a7.png = 250x250)
 
 ## Hardware description
 
