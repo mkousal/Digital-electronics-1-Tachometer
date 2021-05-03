@@ -127,22 +127,22 @@ This block also contains a **function** which converts the traveled distance fro
 ## Testbenches and simulations
 #### `Button_int`:
    - Shows states of `button_int` block
-   - In order to save time and make the inner working of this device more clear, all simulated data has been speedded up.   
+   - In order to save time and make the inner working of this device more clear, all simulated data has been sped up.   
    ![image](images/button_int_bench.png)
 
 #### `km_total`:
    - Screenshot demos how the counting works. 
-   - In order to save time and make the inner working of this device more clear, all simulated data has been speedded up. 
+   - In order to save time and make the inner working of this device more clear, all simulated data has been sped up. 
    ![image](images/km_total_bench.png) 
    
 #### `state_machine`:
    - Screenshot below represents testbench of main unit
-   - In order to save time and make the inner working of this device more clear, all simulated data has been speedded up. 
+   - In order to save time and make the inner working of this device more clear, all simulated data has been sped up. 
    ![image](images/state_machine_bench.png) 
 
 #### `total_time`:
    - Fincionality of total time counting is shown by this signals.
-   - In order to save time and make the inner working of this device more clear, all simulated data has been speedded up.
+   - In order to save time and make the inner working of this device more clear, all simulated data has been sped up.
    ![image](images/total_time_bench.png) 
 
 #### `sensor`: <br/>
