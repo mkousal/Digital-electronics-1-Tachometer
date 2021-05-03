@@ -15,11 +15,12 @@ xxx[Link to GitHub project folder]( https://github.com/Ledvuk/Digital-electronic
 
 Our application uses two hall sensors for measuring speed, traveled distance, burnt calories and time (not by the hall sensor). <br/>
 This data is shown on four 7segment displays (one part).
- - Calories counting
- - Total time
- - Total distance traveled
- - Trip distance traveled
- - Speed measuring <br/>
+  - Calories counting
+  - Total time
+  - Total distance traveled
+  - Trip distance traveled
+  - Speed measuring <br/>
+
 Modes can be selected by pressing buttons (see below). <br/>
 One hall sensor is used for measuring speed and traveled distance. Another one is for calories counting. <br/>
 Burnt calories will increase only by stepping the pedals, not by downhill riding!
