@@ -15,20 +15,23 @@ xxx[Link to GitHub project folder]( https://github.com/Ledvuk/Digital-electronic
 
 Our application uses two hall sensors for measuring speed, traveled distance, burnt calories and time (not by the hall sensor). <br/>
 This data is shown on four 7segment displays (one part).
- - Calories counting
- - Total time
- - Total distance traveled
- -  
-Solarized dark             |  Solarized Ocean
-:-------------------------:|:-------------------------:
-![image](images/arty_a7.png = 250x250)  |  ![image](images/arty_a7.png = 250x250)
+  - Calories counting
+  - Total time
+  - Total distance traveled
+  - Trip distance traveled
+  - Speed measuring <br/>
+
+Modes can be selected by pressing buttons (see below). <br/>
+One hall sensor is used for measuring speed and traveled distance. Another one is for calories counting. <br/>
+Burnt calories will increase only by stepping the pedals, not by downhill riding!
 
 ## Hardware description
 
    ### Programming Board
-   ![image](images/arty_a7.png = 250x250)
+   ![image](images/arty_a7.png)
    - Main programming board is **Arty A7-100T**. It has four Pmod connectors (16.), we have used all of them.
-   - 
+   - Other buttons and LEDs are not used => See **Main Board**
+
    ### Main Board
    ![image](images/tachometerBoard_front.png)
    ![image](images/tachometerBoard_back.png)
@@ -43,9 +46,9 @@ Solarized dark             |  Solarized Ocean
    - [Schematic](files/encoderBoard_schematic.pdf)
    - Hall sensor board only consists of hall sensor and a few passive components that are described in datasheet and connector.
    - You can screw it by using M3 screw to your bicycle.
-   - Used sensor is MH253 - [datasheet](https://datasheet.lcsc.com/szlcsc/1811141821_MST-Magnesensor-Tech-MST-MH253ESO_C114369.pdf)
+   - Used sensor is *MH253* - [datasheet](https://datasheet.lcsc.com/szlcsc/1811141821_MST-Magnesensor-Tech-MST-MH253ESO_C114369.pdf)
 
-## VHDL modules description and simulations
+## VHDL modules description
 
 ### Buttons
 #### `Button_int`:
@@ -74,34 +77,42 @@ This block also contains a **function** which converts the traveled distance fro
    - This block acts as a stopwatch. When startstop is applied, it will *start* or *pause* the counting.
    - *Reset* will reset the total time. 
    - When the *trip mode* is enabled, the stopwatch will automatically start counting the trip time and will reset before every trip is started. 
-<br/>   
-   - This block also contains a function which converts the total time from *binary integer* to *BCD code* to be displayed on the 4 digit 7 segment display.
+ 
+ This block also contains a **function** which converts the total time from *binary integer* to *BCD code* to be displayed on the 4 digit 7 segment display.
 
-### SENSOR: <br/>
-   This block is used to calculate actual speed and triggering pulse every 100 meters for counting travelled distance. <br/>
-   Uses input from hall sensor mounted at the front wheel. Output one trigger signal every counted 100 meters and calculate actual real speed and set it to display output.   
+### SENSOR <br/>
+#### `sensor`:
+   - This block is used to calculate actual speed and triggering pulse every 100 meters for counting travelled distance. <br/>
+   - Uses input from hall sensor mounted at the front wheel. Output one trigger signal every counted 100 meters and calculate actual real speed and set it to display output.   
 
 ### 7 Segment Driver Module <br/>
-   This block consists of 4 smaller modules: `CLOCK`, `UP_DOWN_COUNTER`, `DRIVER_4X7SEG`, `DECODER_7SEG` <br/>
+   - This block consists of 4 smaller modules: 
+      1. `CLOCK`, 
+      2. `UP_DOWN_COUNTER`, 
+      3. `DRIVER_4X7SEG`, 
+      4. `DECODER_7SEG`. <br/>
 #### `CLOCK`:
-   Generates 100MHz clock. This periodic signal is used in module `UP_DOWN_COUNTER`, which reacts on rising edge of the signal. <br/>
-   Originally uses 4ms for each segment.
+   - Generates 100MHz clock. 
+   - This periodic signal is used in module `UP_DOWN_COUNTER`, which reacts on rising edge of the signal. <br/>
+   - Originally uses 4ms for each segment.
 #### `UP_DOWN_COUNTER`:
-   According settings (g_CNT_WIDTH), counts as the edge of the clock signal rises. <br/>
+   - According settings (g_CNT_WIDTH), counts as the edge of the clock signal rises. <br/>
 #### `DRIVER_4X7SEG`:
-   Main module, drives four 7segment displays. It is determinated by `CLOCK` and `UP_DOWN_COUNTER`.<br/>
-   Process MUX uses above modules to set data_outputs to each 7segment display. <br/>
-   Input is a 16bit unsigned (`b"xxxx xxxx xxxx xxxx"`)
+   - Main module, drives four 7segment displays. It is determinated by `CLOCK` and `UP_DOWN_COUNTER`.<br/>
+   - Process MUX uses above modules to set data_outputs to each 7segment display. <br/>
+   - Input is a 16bit unsigned (`b"xxxx xxxx xxxx xxxx"`)
 #### `DECODER_7SEG`:
    This module is used for displaying data on 7segment display. If have more displays, MUX has to be used. <br/>
    Both, common cathode and common anode can be used as well.
 
-### `CALORIES`:
-   This block calculates burned calories by measuring the time between each pedals rotations. Rotation is captured by hall probe attached to pedal. The 100 MHz clock is used for counting time. Every 0.5s a number is increased, which recalculates the calories formula. When signal from hall probe is not generating for 2s, the number that was increasing is stopped. The amount of burned calories is sent to display.
-
-<br>
+### Calories Mode
+#### `calories`:
+   - This block calculates burned calories by measuring the time between each pedals rotations. 
+   - Rotation is captured by hall probe attached to pedal. 
+   - The 100 MHz clock is used for counting time. Every 0.5s a number is increased, which recalculates the calories formula. 
+   - When signal from hall probe is not generating for 2s, the number that was increasing is stopped. The amount of burned calories is sent to display.
    
-### Testbenches
+## Testbenches and simulations
 #### `Button_int`:
    - Shows states of `button_int` block
    - In order to save time and make the inner working of this device more clear, all simulated data has been speedded up.   
@@ -122,18 +133,25 @@ This block also contains a **function** which converts the traveled distance fro
    - In order to save time and make the inner working of this device more clear, all simulated data has been speedded up.
    ![image](images/total_time_bench.png) 
 
-#### `SENSOR`: <br/>
-   - First waveform shows, how the speed calculation works. Calculated speed is written to the `s_disp_o`, which is 16bit word and is here until the new value is calculated.
+#### `sensor`: <br/>
+   - First waveform shows how the speed calculation works. Calculated speed is written to the `s_disp_o`, which is 16bit word and is here until the new value is calculated.
    ![image](images/tb_sensor_speed.png)
-   - Second waveform shows pulsing at the `s_trigger_o` every 50 sensors tick, which is equal to the 100 meters in real distance.
+   - Second waveform shows pulsing at the `s_trigger_o` every 50 sensor's tick, which is equal to the 100 meters in real distance.
    ![image](images/tb_sensor_trigger.png)
 
 #### `CLOCK`: <br/>
+   - Generates 100 MHz clock signal
    ![image](images/tb_CLOCK.PNG)
    
 #### `UP_DOWN_COUNTER`: <br/>
+   - As internal values set, counts with edge of the clock.
+   - 0-31 states:
    ![image](images/tb_UP_DOWN_COUNTER_01.PNG)
+   - 0-31 states:
    ![image](images/tb_UP_DOWN_COUNTER_02.PNG)
+   - 0-4 states = This is used in our application.
+   - Four 7segment displays are controlled by this states.
+   ![image](images/tb_UP_DOWN_COUNTER_03.PNG)
    
 #### `DRIVER_4X7SEG`:
    - These screenshots show how the multiplexer works. 
@@ -142,26 +160,25 @@ This block also contains a **function** which converts the traveled distance fro
    - `s_dig_o` shows which one of four displays is being used. `b"0001"` means display on very right side. 
    - `s_seg_o` represents common cathode bits. 
    ![image](images/tb_DRIVER_4x7SEG_01.PNG)
-   ![image](images/tb_DRIVER_4x7SEG_02.PNG)
-   
+   ![image](images/tb_DRIVER_4x7SEG_02.PNG)   
    - This screenshot shows a real situation, when input data will be refreshed every one second (tachometer). 
-   - If data is not changed for a while, displays will use last data. This prevents from bad/unwanted values. 
+   - If data is not changed for a while, displays will use last data. This prevents from wrong/unwanted values. 
    ![image](images/tb_DRIVER_4x7SEG_03.PNG)
 #### `DECODER_7SEG`:
+   - Decodes 4bit signal to 7bit (7 segments (+ decimal dot and colon)).
    ![image](images/tb_DECODER_7SEG.PNG)
 
-### `CALORIES`
-   The simulation is in ratio 1s = 10ms. In wave form is display calories counting in both modes and amount of burned calories is sending to display.
+#### `calories`:
+   - The simulation is in ratio 1s = 10ms. 
+   - In wave form is display calories counting in both modes and amount of burned calories is sending to display.
    ![image](images/tb_calories.PNG)
 
-<br>
-
-
-
 ## TOP module description and simulations
-
-Write your text here.
-
+   - TOP module represents the whole project.
+   - Final test schema can be seen below:
+   ![image](images/top_tachometer.png)
+   - After having **main board** and **hall sensor board** done, software can be written into Arty A7 board.
+   ![image](images/implementation_completed.png)
 
 ## Video
 
@@ -170,16 +187,22 @@ Write your text here.
 
 ## References
 
-   ### Used:
+   ### Used materials:
    - Theoretical knowledge from Digital-Electronics-1 Labs, 2021 > [Link]( https://github.com/tomas-fryza/Digital-electronics-1/tree/master/Labs)
-   - Labs from classes from DE1 
+   - Labs from classes **DE1** 
    - DE1 Lecture PDF > [Link]( https://moodle.vutbr.cz/pluginfile.php/331523/mod_resource/content/3/DE1_lecture_part4_CZE.pdf)
    -
    -
-   ### Links:
+   ### Used programs and its links:
+   - [Xilinx Vivado 2020]( https://www.xilinx.com/products/design-tools/vivado.html)
+   - [VSCode]( https://code.visualstudio.com/)
+   - [KiCad]( https://www.kicad.org/)
+   - [Xilinx Vivado 2020]( https://www.xilinx.com/products/design-tools/vivado.html)
    - [7 Segment Display]( https://docs.rs-online.com/6e0e/0900766b8130126b.pdf)
    - [Vivado tutorials]( https://vhdlwhiz.com/basic-vhdl-tutorials/ )
    - [Tutorial from Xilinx]( https://www.xilinx.com/support/documentation/university/Vivado-Teaching/HDL-Design/2013x/Nexys4/Verilog/docs-pdf/Vivado_tutorial.pdf)
    - [7 Segment Display]( https://docs.rs-online.com/6e0e/0900766b8130126b.pdf)
    - [Board Editor]( https://jamboard.google.com/)
+   - [GitHub Desktop]( https://desktop.github.com/)
+   - [Git Bash]( https://git-scm.com/download/win)
    
