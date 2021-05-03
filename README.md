@@ -218,7 +218,7 @@ This block also contains a **function** which converts the traveled distance fro
    - [Git Bash]( https://git-scm.com/download/win)
    
 ________________________________________________________________________________
-©2021, VUT FETK, Brno, Czech Republic <br/>
+©2021, VUT FEKT, Brno, Czech Republic <br/>
 Kousal Martin, Ledvina Matej, Kříčka Tomáš, Košík Samuel <br/>
 **For Educational Purposes Only!**
 
