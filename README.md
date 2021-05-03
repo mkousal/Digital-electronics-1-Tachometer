@@ -3,9 +3,10 @@
 ![image](images/fekt_logo.png) <br/>
 **Title:** Project 2021 <br/>
 **Topic:** 3. Console for bike with hall sensor, measuring and displaying speed, traveled distance and burnt calories <br/>
-**Time Windown:** <br/>
+**Time Windown:** 
    - *Start of Project*: *April 7*
    - *End of Project*:   *May 4* <br/>
+
 **Supervisor:** **_doc. Ing. Tomáš Frýza, Ph.D._** <br/>
 **Vivado Teachers:** **_doc. Ing. Tomáš Frýza, Ph.D._**, **_Ing. Stanislav Rozum_**
 
