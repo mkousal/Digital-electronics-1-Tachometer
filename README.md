@@ -19,7 +19,7 @@ This data is shown on four 7segment displays (one part).
  - Total time
  - Total distance traveled
  - Trip distance traveled
- - Speed measuring
+ - Speed measuring <br/>
 Modes can be selected by pressing buttons (see below). <br/>
 One hall sensor is used for measuring speed and traveled distance. Another one is for calories counting. <br/>
 Burnt calories will increase only by stepping the pedals, not by downhill riding!
