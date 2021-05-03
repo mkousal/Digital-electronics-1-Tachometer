@@ -18,7 +18,11 @@ This data is shown on four 7segment displays (one part).
  - Calories counting
  - Total time
  - Total distance traveled
- -  
+ - Trip distance traveled
+ - Speed measuring
+Modes can be selected by pressing buttons (see below). <br/>
+One hall sensor is used for measuring speed and traveled distance. Another one is for calories counting. <br/>
+Burnt calories will increase only by stepping the pedals, not by downhill riding!
 
 ## Hardware description
 
@@ -85,7 +89,7 @@ This block also contains a **function** which converts the traveled distance fro
       1. `CLOCK`, 
       2. `UP_DOWN_COUNTER`, 
       3. `DRIVER_4X7SEG`, 
-      4. `DECODER_7SEG` <br/>
+      4. `DECODER_7SEG`. <br/>
 #### `CLOCK`:
    - Generates 100MHz clock. 
    - This periodic signal is used in module `UP_DOWN_COUNTER`, which reacts on rising edge of the signal. <br/>
@@ -182,16 +186,22 @@ This block also contains a **function** which converts the traveled distance fro
 
 ## References
 
-   ### Used:
+   ### Used materials:
    - Theoretical knowledge from Digital-Electronics-1 Labs, 2021 > [Link]( https://github.com/tomas-fryza/Digital-electronics-1/tree/master/Labs)
-   - Labs from classes from DE1 
+   - Labs from classes **DE1** 
    - DE1 Lecture PDF > [Link]( https://moodle.vutbr.cz/pluginfile.php/331523/mod_resource/content/3/DE1_lecture_part4_CZE.pdf)
    -
    -
-   ### Links:
+   ### Used programs and its links:
+   - [Xilinx Vivado 2020]( https://www.xilinx.com/products/design-tools/vivado.html)
+   - [VSCode]( https://code.visualstudio.com/)
+   - [KiCad]( https://www.kicad.org/)
+   - [Xilinx Vivado 2020]( https://www.xilinx.com/products/design-tools/vivado.html)
    - [7 Segment Display]( https://docs.rs-online.com/6e0e/0900766b8130126b.pdf)
    - [Vivado tutorials]( https://vhdlwhiz.com/basic-vhdl-tutorials/ )
    - [Tutorial from Xilinx]( https://www.xilinx.com/support/documentation/university/Vivado-Teaching/HDL-Design/2013x/Nexys4/Verilog/docs-pdf/Vivado_tutorial.pdf)
    - [7 Segment Display]( https://docs.rs-online.com/6e0e/0900766b8130126b.pdf)
    - [Board Editor]( https://jamboard.google.com/)
+   - [GitHub Desktop]( https://desktop.github.com/)
+   - [Git Bash]( https://git-scm.com/download/win)
    
