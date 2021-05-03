@@ -4,8 +4,8 @@
 
 - **Martin Kousal**, **ID=** *221063* <br/> 
 [Link to GitHub project folder]( http://github.com/mkousal/Digital-electronics-1-Tachometer) <br/> 
-- **Matej Ledvina**, **ID=** *22xxxx* <br/> 
-xxx[Link to GitHub project folder]( http://github.com/xxx) <br/> 
+- **Matej Ledvina**, **ID=** *221339* <br/> 
+xxx[Link to GitHub project folder]( https://github.com/Ledvuk/Digital-electronics-1) <br/> 
 - **Tomáš Kříčka**, **ID=**  *223283* <br/> 
 [Link to GitHub]( https://github.com/TomasKricka) <br/> 
 - **Samuel Košík**, **ID=** *221056* <br/>
@@ -32,7 +32,7 @@ This data is shown on four 7segment displays (one part).
    - Used seven segment display with middle double dot and dots for decimal is TDCG1050m - [datasheet](https://www.vishay.com/docs/83180/tdcx10x0m.pdf)
 
    ### Hall sensor board
-   ![image](images/encoderBoard_front.png)
+   ![image](images/encoderBoard_front.png)  
    ![image](images/encoderBoard_back.png)
    - [Schematic](files/encoderBoard_schematic.pdf)
    - Hall sensor board only consists of hall sensor and a few passive components that are described in datasheet and connector.
@@ -41,11 +41,41 @@ This data is shown on four 7segment displays (one part).
 
 ## VHDL modules description and simulations
 
-### `SENSOR`: <br/>
+### Buttons
+#### `Button_int`:
+   - This block reads the input from real world buttons and translates them to commands which will be sent to the state_machine controller. When buttons *up* or *down* are            pressed, the interface will enter a cooldown state when no additional button presses will be registered (to prevent jitter) after the cooldown passes, the interface will        send an *up* or *down* command out. 
+   - If the *ok* button is pressed, the device enters the cooldown state, after which it will wait for a longer ammount of time. If no additional *ok* button press is                registered, the interface will send out an *startstop* command. 
+   - If, however, the *ok* button would be pressed again, the interface will send out the *reset* command.
+### Traveled distance
+#### `km_total`:
+   - This block counts the travel distance and sends it out to the display. Every 100 m (meters) an pulse will appear on the `meters_i` which will add to the total count of up        to *999,9 km*. 
+   - When the **trip mode** is activated the block will count the trip time and send it to the display instead, the total time is being still counted in the background.
+   - *rst signal* will make the current displayed data reset to 0. 
+   - The enable signal will be present if the trip is not paused, on *pause* the trip data is not counted. 
+   - This block automaticaly wipes previous trip data when the mode is turned on.
+
+This block also contains a **function** which converts the traveled distance from *binary integer* to *BCD code* to be displayed on the 4 digit 7 segment display.
+
+### Main controling module
+#### `state_machine`:
+   - This is the main utility block of the device. It recives commands from the button interface and switches the outputs accordingly. Inputs `up_i` and `down_i` will cycle          through the 4 modes of the device and light up their status LED. 
+   - While in a mode the *data stream* from its block will be sent to be displayed on the segment display via the `data_o`, with added decimal point or double dot if needed. 
+   - While in a mode the *reset* and *ok* commands also aply for the selected block only. The *trip mode* is special, because it does not generate data on its own, when              activated, it will send a mode change command to all blocks which will now store and display data in an additional variable as well as keeping the total count going. 
+   - The status LED of trip will remain on as we cycle through the other modes until it is paused by the *startstop* button or turned off via the reset. At this point all trip        data will be reset from all blocks and the normal total data will be displayed.
+
+### Time mode
+#### `total_time`:
+   - This block acts as a stopwatch. When startstop is applied, it will *start* or *pause* the counting.
+   - *Reset* will reset the total time. 
+   - When the *trip mode* is enabled, the stopwatch will automatically start counting the trip time and will reset before every trip is started. 
+<br/>   
+   - This block also contains a function which converts the total time from *binary integer* to *BCD code* to be displayed on the 4 digit 7 segment display.
+
+### SENSOR: <br/>
    This block is used to calculate actual speed and triggering pulse every 100 meters for counting travelled distance. <br/>
    Uses input from hall sensor mounted at the front wheel. Output one trigger signal every counted 100 meters and calculate actual real speed and set it to display output.   
 
-### (last one). 7 Segment Driver Module <br/>
+### 7 Segment Driver Module <br/>
    This block consists of 4 smaller modules: `CLOCK`, `UP_DOWN_COUNTER`, `DRIVER_4X7SEG`, `DECODER_7SEG` <br/>
 #### `CLOCK`:
    Generates 100MHz clock. This periodic signal is used in module `UP_DOWN_COUNTER`, which reacts on rising edge of the signal. <br/>
@@ -55,22 +85,41 @@ This data is shown on four 7segment displays (one part).
 #### `DRIVER_4X7SEG`:
    Main module, drives four 7segment displays. It is determinated by `CLOCK` and `UP_DOWN_COUNTER`.<br/>
    Process MUX uses above modules to set data_outputs to each 7segment display. <br/>
-   Input is a 16bit std_vector (`b"xxxx xxxx xxxx xxxx"`)
+   Input is a 16bit unsigned (`b"xxxx xxxx xxxx xxxx"`)
 #### `DECODER_7SEG`:
    This module is used for displaying data on 7segment display. If have more displays, MUX has to be used. <br/>
    Both, common cathode and common anode can be used as well.
 
 ### `CALORIES`:
-   This block is calculating burned calories by measuring the time between each pedals rotations. Rotation is captured by hall probe attached to pedal. The 100 MHz clock is used for counting time. Every 0.5s a number is increased, which recalculates the calories formula. When signal from hall probe is not generating for 2s, the number that was increasing is stopped. The amount of burned calories is send to display.
+   This block calculates burned calories by measuring the time between each pedals rotations. Rotation is captured by hall probe attached to pedal. The 100 MHz clock is used for counting time. Every 0.5s a number is increased, which recalculates the calories formula. When signal from hall probe is not generating for 2s, the number that was increasing is stopped. The amount of burned calories is sent to display.
 
 <br>
    
 ### Testbenches
+#### `Button_int`:
+   - Shows states of `button_int` block
+   - In order to save time and make the inner working of this device more clear, all simulated data has been speedded up.   
+   ![image](images/button_int_bench.png)
+
+#### `km_total`:
+   - Screenshot demos how the counting works. 
+   - In order to save time and make the inner working of this device more clear, all simulated data has been speedded up. 
+   ![image](images/km_total_bench.png) 
+   
+#### `state_machine`:
+   - Screenshot below represents testbench of main unit
+   - In order to save time and make the inner working of this device more clear, all simulated data has been speedded up. 
+   ![image](images/state_machine_bench.png) 
+
+#### `total_time`:
+   - Fincionality of total time counting is shown by this signals.
+   - In order to save time and make the inner working of this device more clear, all simulated data has been speedded up.
+   ![image](images/total_time_bench.png) 
 
 #### `SENSOR`: <br/>
-   First waveform shows, how the speed calculation works. Calculated speed is written to the `s_disp_o`, which is 16bit word and is here until the new value is calculated.
+   - First waveform shows, how the speed calculation works. Calculated speed is written to the `s_disp_o`, which is 16bit word and is here until the new value is calculated.
    ![image](images/tb_sensor_speed.png)
-   Second waveform shows pulsing at the `s_trigger_o` every 50 sensors tick, which is equal to the 100 meters in real distance.
+   - Second waveform shows pulsing at the `s_trigger_o` every 50 sensors tick, which is equal to the 100 meters in real distance.
    ![image](images/tb_sensor_trigger.png)
 
 #### `CLOCK`: <br/>
