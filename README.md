@@ -41,11 +41,17 @@ This data is shown on four 7segment displays (one part).
 
 ## VHDL modules description and simulations
 
-### `SENSOR`: <br/>
+### Buttons:
+#### `Button_int`
+   - This block reads the input from real world buttons and translates them to commands which will be sent to the state_machine controller. When buttons *up* or *down* are            pressed, the interface will enter a cooldown state when no additional button presses will be registered (to prevent jitter) after the cooldown passes, the interface will        send an *up* or *down* command out. 
+   - If the *ok* button is pressed, the device enters the cooldown state, after which it will wait for a longer ammount of time. If no additional *ok* button press is                registered, the interface will send out an *startstop* command. 
+   - If, however, the *ok* button would be pressed again, the interface will send out the *reset* command.
+
+### SENSOR: <br/>
    This block is used to calculate actual speed and triggering pulse every 100 meters for counting travelled distance. <br/>
    Uses input from hall sensor mounted at the front wheel. Output one trigger signal every counted 100 meters and calculate actual real speed and set it to display output.   
 
-### (last one). 7 Segment Driver Module <br/>
+### 7 Segment Driver Module <br/>
    This block consists of 4 smaller modules: `CLOCK`, `UP_DOWN_COUNTER`, `DRIVER_4X7SEG`, `DECODER_7SEG` <br/>
 #### `CLOCK`:
    Generates 100MHz clock. This periodic signal is used in module `UP_DOWN_COUNTER`, which reacts on rising edge of the signal. <br/>
@@ -61,16 +67,21 @@ This data is shown on four 7segment displays (one part).
    Both, common cathode and common anode can be used as well.
 
 ### `CALORIES`:
-   This block is calculating burned calories by measuring the time between each pedals rotations. Rotation is captured by hall probe attached to pedal. The 100 MHz clock is used for counting time. Every 0.5s a number is increased, which recalculates the calories formula. When signal from hall probe is not generating for 2s, the number that was increasing is stopped. The amount of burned calories is send to display.
+   This block calculates burned calories by measuring the time between each pedals rotations. Rotation is captured by hall probe attached to pedal. The 100 MHz clock is used for counting time. Every 0.5s a number is increased, which recalculates the calories formula. When signal from hall probe is not generating for 2s, the number that was increasing is stopped. The amount of burned calories is sent to display.
 
 <br>
    
 ### Testbenches
+### `Button_int`:
+   - Shows states of `button_int` block
+   - In order to save time and make the inner working of this device more clear, all simulated data has been speedded up.
+   
+![image](images/button_int_bench.png)
 
 #### `SENSOR`: <br/>
-   First waveform shows, how the speed calculation works. Calculated speed is written to the `s_disp_o`, which is 16bit word and is here until the new value is calculated.
+   - First waveform shows, how the speed calculation works. Calculated speed is written to the `s_disp_o`, which is 16bit word and is here until the new value is calculated.
    ![image](images/tb_sensor_speed.png)
-   Second waveform shows pulsing at the `s_trigger_o` every 50 sensors tick, which is equal to the 100 meters in real distance.
+   - Second waveform shows pulsing at the `s_trigger_o` every 50 sensors tick, which is equal to the 100 meters in real distance.
    ![image](images/tb_sensor_trigger.png)
 
 #### `CLOCK`: <br/>
