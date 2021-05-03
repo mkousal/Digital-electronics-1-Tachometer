@@ -82,10 +82,10 @@ This block also contains a **function** which converts the traveled distance fro
 
 ### 7 Segment Driver Module <br/>
    - This block consists of 4 smaller modules: 
-      i. `CLOCK`, 
-      ii. `UP_DOWN_COUNTER`, 
-      iii. `DRIVER_4X7SEG`, 
-      iiii. `DECODER_7SEG` <br/>
+      1. `CLOCK`, 
+      2. `UP_DOWN_COUNTER`, 
+      3. `DRIVER_4X7SEG`, 
+      4. `DECODER_7SEG` <br/>
 #### `CLOCK`:
    - Generates 100MHz clock. 
    - This periodic signal is used in module `UP_DOWN_COUNTER`, which reacts on rising edge of the signal. <br/>
@@ -172,7 +172,7 @@ This block also contains a **function** which converts the traveled distance fro
    - TOP module represents the whole project.
    - Final test schema can be seen below:
    ![image](images/top_tachometer.png)
-   - After having **main board** and **hall sensor board** done, software can be written into Arty A7 board
+   - After having **main board** and **hall sensor board** done, software can be written into Arty A7 board.
    ![image](images/implementation_completed.png)
 
 ## Video
